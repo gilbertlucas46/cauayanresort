@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 
- class VillasLayout extends Component {
+export default class VillasLayout extends Component {
   render() {
       const {markdownRemark} = this.props.data;
     return (
@@ -33,4 +33,3 @@ export const query = graphql`
 `
 
 
-export  default VillasLayout ;
