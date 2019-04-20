@@ -3,19 +3,17 @@ import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from "gatsby"
 
 const LISTINGS_QUERY = graphql`
-query VillasListings {
-    allMarkdownRemark(limit:6, sort: {
-    order: DESC
-  }){
-        edges {
-            node {
-                frontmatter {
-                    title
+    query VillasListings {
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                    }
                 }
             }
         }
     }
-}
 `;
 
 const ListingsList = styled.ul`
@@ -31,10 +29,10 @@ const Listings = () => (
             <h3>Listings</h3>
             <ListingsList>
             {allMarkdownRemark.edges.map(edge => (
-                <li key={edge.node.frontmatter.slug}>
-                <Link to={`/posts${edge.node.frontmatter.slug}`}>
-                {edge.node.frontmatter.title}
-              </Link>
+                <li key={edge.node.frontmatter.title}>
+                <Link to={`/villas/${edge.node.frontmatter.title.split(' ').join('-').toLowerCase()}`}>
+                    {edge.node.frontmatter.title}
+                </Link>
                 </li>
             ))}
             </ListingsList>
