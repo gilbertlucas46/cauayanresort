@@ -1,0 +1,22 @@
+backend:
+  name: github
+  branch: staging
+  repo: gilbertlucas46/cauayanresort
+
+media_folder: static/img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: 'villas'
+    label: 'Villas'
+    folder: 'src/villas'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {label: "Image", name: "thumbnail", widget: "image", required: true}
+      - { label: 'Villa Name', name: 'title', widget: 'string'}
+      - { label: 'Area Size', name: 'size', widget: 'string'}
+      - { label: 'Description', name: 'desc', widget: 'markdown'}
+      
+        
+
