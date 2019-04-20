@@ -1,6 +1,7 @@
 ---
 thumbnail: /img/uploads/main_1.jpg
 title: beach view villa
+slug: beach-view-villa
 size: '55'
 desc: |-
   Wake up to both views of the tranquil beach and the lush flora of the island.
