@@ -32,7 +32,7 @@ collections:
               {
                 label: Sliders,
                 name: slider,
-                required: true,
+                
                 widget: list,
                 fields:
                   [
@@ -43,16 +43,15 @@ collections:
                       hint: "This is the images in that slides in home page",
                       widget: image,
                     },
-                    { label: Title, name: title, required: true, widget: string },
+                    { label: Title, name: title,  widget: string },
                     { label: Caption, name: caption, widget: string },
-                    { label: Button, name: button, required: true, widget: string },
+                    { label: Button, name: button,  widget: string },
                     { label: URL, name: url, widget: string }
                   ],
               },
               {
                 label: Image Nav,
                 name: imagenav,
-                required: true,
                 widget: list,
                 fields:
                   [
@@ -63,14 +62,13 @@ collections:
                       hint: "image nav for home page",
                       widget: image,
                     },
-                    { label: Title, name: title, required: true, widget: string },
+                    { label: Title, name: title,  widget: string },
                     { label: URL, name: url, widget: string }
                   ],
               },
               {
                 label: Video,
                 name: video,
-                required: true,
                 widget: object,
                 fields:
                   [
@@ -81,8 +79,8 @@ collections:
                       hint: "Play button for home page",
                       widget: image,
                     },
-                    { label: Title, name: title, required: true, widget: string },
-                    { label: Caption, name: caption, required: true, widget: string },
+                    { label: Title, name: title,  widget: string },
+                    { label: Caption, name: caption,  widget: string },
                     {label: "Description", name: "description", widget: "text"}
                   ],
               }
