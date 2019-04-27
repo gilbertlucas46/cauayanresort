@@ -2,21 +2,72 @@ backend:
   name: github
   branch: staging
   repo: gilbertlucas46/cauayanresort
+  squash_merges: true
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
 
 media_folder: static/img/uploads
 public_folder: /img/uploads
 
 collections:
-  - name: 'villas'
-    label: 'Villas'
-    folder: 'src/villas'
+  - name: "meetups"
+    label: "Meetups"
+    description: "Meetup dates, location, and presenter information."
+    folder: "src/pages/meetups"
     create: true
-    slug: '{{slug}}'
     fields:
-      - {label: "Image", name: "thumbnail", widget: "image", required: true}
-      - { label: 'Villa Name', name: 'title', widget: 'string'}
-      - { label: 'Area Size', name: 'size', widget: 'string'}
-      - { label: 'Description', name: 'desc', widget: 'markdown'}
-      
-        
-
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - {
+          label: Presenters,
+          name: presenters,
+          required: true,
+          widget: list,
+          fields:
+            [
+              { label: Name, name: name, required: true, widget: string },
+              {
+                label: Presentation Title,
+                name: presentationTitle,
+                required: false,
+                widget: string,
+              },
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "If an image isn't specified, a default headshot placeholder image will be used",
+                widget: image,
+              },
+              { label: Text, name: text, required: true, widget: text },
+              {
+                label: Links,
+                name: links,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Text, name: linkText, widget: string },
+                    { label: URL, name: linkURL, widget: string },
+                  ],
+              },
+            ],
+        }
+      - {
+          label: "Location",
+          name: "location",
+          required: true,
+          widget: "object",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              { label: "Google Maps Link", name: "mapsLink", widget: "string" },
+              { label: "Latitude", name: "mapsLatitude", widget: "number", valueType: "float" },
+              { label: "Longitude", name: "mapsLongitude", widget: "number", valueType: "float" },
+            ],
+        }

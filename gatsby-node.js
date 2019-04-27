@@ -1,4 +1,6 @@
 const path = require('path');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+
 
 
 exports.createPages = ({ graphql, actions }) => {
@@ -10,7 +12,6 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               frontmatter {
-                title
                 slug
               }
             }
@@ -20,14 +21,17 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(results => {
       results.data.allMarkdownRemark.edges.forEach(({node}) => {
         createPage({
-            path: `/villas/${node.frontmatter.slug}`,
-            component: path.resolve('./src/components/villasLayout.js'),
-            context: {
-              slug: node.frontmatter.slug,
-            }
-          });
+          path: `/villas/${node.frontmatter.slug}`,
+          component: path.resolve('./src/components/villasLayout.js'),
+          context: {
+            slug: node.frontmatter.slug,
+          }
+        });
       })
       resolve();
     })
   });
 }
+exports.onCreateNode = ({ node }) => {
+    fmImagesToRelative(node);
+  }
