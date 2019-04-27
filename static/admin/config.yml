@@ -20,93 +20,76 @@ collections:
     folder: "src/pages/main"
     create: true
     fields:
-      - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: Sliders,
-          name: slider,
-          required: true,
-          widget: list,
-          fields:
-            [
-              {
-                label: Image,
-                name: image,
-                required: false,
-                hint: "This is the images in that slides in home page",
-                widget: image,
-              },
-              { label: Title, name: title,  widget: string },
-              { label: Caption, name: caption, widget: string },
-              { label: Button, name: button,  widget: string },
-              { label: URL, name: url, widget: string }
-            ],
-        }
-      - {
-          label: Image Nav,
-          name: imagenav,
-          widget: list,
-          fields:
-            [
-              {
-                label: Image,
-                name: image,
-                required: false,
-                hint: "image nav for home page",
-                widget: image,
-              },
-              { label: Title, name: title,  widget: string },
-              { label: URL, name: url, widget: string }
-            ],
-        }
       - {
           label: Video,
           name: video,
           widget: object,
           fields:
             [
+              { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
+              { label: "Title", name: "title", widget: "string" }
               {
-                label: Play Button,
-                name: button,
+                label: Sliders,
+                name: slider,
                 required: false,
-                hint: "Play button for home page",
-                widget: image,
-              },
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "This is the images in that slides in home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title,  widget: string },
+                    { label: Caption, name: caption, widget: string },
+                    { label: Button, name: button,  widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
+              }
               {
-                label: Video BG,
-                name: videobg,
-                required: false,
-                hint: "Video BG",
-                widget: image,
-              },
-              { label: Title, name: title,  widget: string },
-              { label: Caption, name: caption,  widget: string },
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Video Source", name: "source", widget: "text"}
-            ],
-        }
-  - name: "about"
-    label: "About Page"
-    description: "About Page"
-    folder: "src/pages/main"
-    create: true
-    fields:
-      - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: Image Nav,
-          name: imagenav,
-          widget: list,
-          fields:
-            [
-              {
-                label: Image,
-                name: image,
-                required: false,
-                hint: "image nav for home page",
-                widget: image,
-              },
-              { label: Title, name: title,  widget: string },
-              { label: URL, name: url, widget: string }
-            ],
+                label: Image Nav,
+                name: imagenav,
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "image nav for home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title,  widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
+                }
+                {
+                  label: Video,
+                  name: video,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: Play Button,
+                        name: button,
+                        required: false,
+                        hint: "Play button for home page",
+                        widget: image,
+                      },
+                      {
+                        label: Video BG,
+                        name: videobg,
+                        required: false,
+                        hint: "Video BG",
+                        widget: image,
+                      },
+                      { label: Title, name: title,  widget: string },
+                      { label: Caption, name: caption,  widget: string },
+                      {label: "Description", name: "description", widget: "text"},
+                      {label: "Video Source", name: "source", widget: "text"}
+                    ],
+                  }
+            ]
         }
