@@ -98,9 +98,36 @@ collections:
                 widget: image,
               },
               { label: Title, name: title,  widget: string },
-              {label: "Description", name: "description", widget: "text"},
+              { label: "Description", name: "description", widget: "text"},
               { label: Button Name, name: btname,  widget: string },
               { label: URL, name: url, widget: string }
+            ],
+        }
+  - name: "villas"
+    label: "Our Villas Page"
+    description: "Contain"s villas listings
+    folder: "src/pages/main"
+    create: true
+    fields:
+      - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text"},
+      - {
+          label: Villas,
+          name: villas,
+          widget: list,
+          fields:
+            [
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "Villa Image",
+                widget: image,
+              },
+              { label: Title, name: title,  widget: string },
+              { label: Size, name: size,  widget: string },
+              { label: "Description", name: "description", widget: "text"},
             ],
         }
         
