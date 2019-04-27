@@ -49,6 +49,26 @@ collections:
                     { label: URL, name: url, widget: string }
                   ],
               },
+            ],
+            [
+              {
+                label: Image Navigation,
+                name: imagenav,
+                required: true,
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "navigation image in home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title, required: true, widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
+              },
             ]
         }
 
