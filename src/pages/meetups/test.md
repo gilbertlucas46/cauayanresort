@@ -9,5 +9,9 @@ slider:
     image: /img/uploads/hero.jpg
     title: The art of laid back luxury
     url: /villas
+imagenav:
+  - image: /img/uploads/imagenav-our-villas.jpg
+    title: our villas
+    url: /villas
 ---
 
