@@ -16,11 +16,13 @@ public_folder: /img/uploads
 collections:
   - name: "pages"
     label: "Pages"
-    description: "Lists of all Main pages"
-    folder: "src/pages/main"
+    description: "Meetup dates, location, and presenter information."
+    folder: "src/pages/meetups"
     create: true
     fields:
-      - { label: "Main Pages", name: "templateKey", widget: "hidden", default: "mainpages" }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - {
           label: Presenters,
           name: presenters,
@@ -56,16 +58,4 @@ collections:
               },
             ],
         }
-      - {
-          label: "Location",
-          name: "location",
-          required: true,
-          widget: "object",
-          fields:
-            [
-              { label: "Name", name: "name", widget: "string" },
-              { label: "Google Maps Link", name: "mapsLink", widget: "string" },
-              { label: "Latitude", name: "mapsLatitude", widget: "number", valueType: "float" },
-              { label: "Longitude", name: "mapsLongitude", widget: "number", valueType: "float" },
-            ],
-        }
+
