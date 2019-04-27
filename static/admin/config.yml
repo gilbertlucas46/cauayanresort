@@ -21,7 +21,8 @@ collections:
     create: true
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
-      - { label: "Page", name: "pagename", widget: "hidden", default: "home" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - {
           label: Sliders,
           name: slider,
