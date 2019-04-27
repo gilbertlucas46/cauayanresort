@@ -26,7 +26,6 @@ collections:
           label: Home,
           name: home,
           widget: object,
-          expandItems: false,
           fields:
             [
               {
@@ -49,6 +48,6 @@ collections:
                     { label: URL, name: url, widget: string }
                   ],
               },
-            ],
+            ]
         }
 
