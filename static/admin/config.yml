@@ -20,41 +20,41 @@ collections:
     folder: "src/pages/main"
     create: true
     fields:
-    - label: "Main Page", 
-      name: "pages", 
-      required: true, 
-      widget: "object",
-      fields:
-        [
-          - { label: "page", name: "templateKey", widget: "hidden", default: "home" },
-          - { label: "Page Name", name: "pagname", widget: "string" },
-          - {
-              label: Sliders,
-              name: slider,
-              required: true,
-              widget: list,
-              fields:
-                [
-                  { label: Title, name: title, required: true, widget: string },
-                  {
-                    label: Image,
-                    name: image,
-                    required: false,
-                    hint: "This is the images in that slides in home page",
-                    widget: image,
-                  },
-                  {
-                    label: Links,
-                    name: links,
-                    required: false,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Text, name: name, widget: string },
-                        { label: URL, name: url, widget: string },
-                      ],
-                  },
-                ],
-            }
-        ]
-    
+    - { label: "Main Page", 
+        name: "pages", 
+        required: true, 
+        widget: "object",
+        fields:
+          [
+            - { label: "page", name: "templateKey", widget: "hidden", default: "home" },
+            - { label: "Page Name", name: "pagname", widget: "string" },
+            - {
+                label: Sliders,
+                name: slider,
+                required: true,
+                widget: list,
+                fields:
+                  [
+                    { label: Title, name: title, required: true, widget: string },
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "This is the images in that slides in home page",
+                      widget: image,
+                    },
+                    {
+                      label: Links,
+                      name: links,
+                      required: false,
+                      widget: list,
+                      fields:
+                        [
+                          { label: Text, name: name, widget: string },
+                          { label: URL, name: url, widget: string },
+                        ],
+                    },
+                  ],
+              }
+          ]
+      }
