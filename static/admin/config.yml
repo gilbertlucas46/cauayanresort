@@ -23,22 +23,28 @@ collections:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: Sliders,
-          name: slider,
-          required: true,
-          widget: list,
+          label: Home,
+          name: home,
+          widget: object,
           fields:
-            [
-              { label: Title, name: title, required: true, widget: string },
-              {
-                label: Image,
-                name: image,
-                required: false,
-                hint: "This is the images in that slides in home page",
-                widget: image,
+            - {
+                label: Sliders,
+                name: slider,
+                required: true,
+                widget: list,
+                fields:
+                  [
+                    { label: Title, name: title, required: true, widget: string },
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "This is the images in that slides in home page",
+                      widget: image,
+                    },
+                    { label: Text, name: name, widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
               },
-              { label: Text, name: name, widget: string },
-              { label: URL, name: url, widget: string }
-            ],
         }
 
