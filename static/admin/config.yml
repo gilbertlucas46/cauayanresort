@@ -20,6 +20,7 @@ collections:
     folder: "src/pages/main"
     expandItems: false
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Main Pages", name: "templateKey", widget: "hidden", default: "mainpages" }
       - {
