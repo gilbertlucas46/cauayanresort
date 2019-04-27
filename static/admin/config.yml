@@ -18,10 +18,10 @@ collections:
     label: "Pages"
     description: "Lists of all Main pages"
     folder: "src/pages/main"
+    expandItems: false
     create: true
     fields:
       - { label: "Main Pages", name: "templateKey", widget: "hidden", default: "mainpages" }
-      - { label: "Page Name", name: "pagname", widget: "string" }
       - {
           label: "Home Page",
           name: "home",
@@ -30,11 +30,7 @@ collections:
           widget: "object",
           fields:
             [
-              { label: "Name", name: "name", widget: "string" },
-              { label: "Google Maps Link", name: "mapsLink", widget: "string" },
-              { label: "Latitude", name: "mapsLatitude", widget: "number", valueType: "float" },
-              { label: "Longitude", name: "mapsLongitude", widget: "number", valueType: "float" },
-              { label: "Page", name: "pagename", widget: "string", default: "home" },
+              { label: "Page", name: "pagename", widget: "hidden", default: "home" },
               {
                 label: Sliders,
                 name: slider,
