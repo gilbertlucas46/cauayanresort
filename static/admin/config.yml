@@ -20,35 +20,54 @@ collections:
     folder: "src/pages/main"
     create: true
     fields:
-      - { label: "Main Pages", name: "templateKey", widget: "hidden", default: "mainpages" }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - {
-          label: "Home Page",
-          name: "home",
+          label: Presenters,
+          name: presenters,
           required: true,
-          expandItems: false,
-          widget: "object",
+          widget: list,
           fields:
             [
-              { label: "Page", name: "pagename", widget: "hidden", default: "home" },
+              { label: Name, name: name, required: true, widget: string },
               {
-                label: Sliders,
-                name: slider,
-                required: true,
+                label: Presentation Title,
+                name: presentationTitle,
+                required: false,
+                widget: string,
+              },
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "If an image isn't specified, a default headshot placeholder image will be used",
+                widget: image,
+              },
+              { label: Text, name: text, required: true, widget: text },
+              {
+                label: Links,
+                name: links,
+                required: false,
                 widget: list,
                 fields:
                   [
-                    { label: Title, name: title, required: true, widget: string },
-                    {
-                      label: Image,
-                      name: image,
-                      required: false,
-                      hint: "This is the images in that slides in home page",
-                      widget: image,
-                    },
-                    { label: Text, name: name, widget: string },
-                    { label: URL, name: url, widget: string },
+                    { label: Text, name: linkText, widget: string },
+                    { label: URL, name: linkURL, widget: string },
                   ],
-              }
+              },
             ],
         }
-      
+      - {
+          label: "Location",
+          name: "location",
+          required: true,
+          widget: "object",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              { label: "Google Maps Link", name: "mapsLink", widget: "string" },
+              { label: "Latitude", name: "mapsLatitude", widget: "number", valueType: "float" },
+              { label: "Longitude", name: "mapsLongitude", widget: "number", valueType: "float" },
+            ],
+        }
