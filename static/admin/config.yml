@@ -28,22 +28,22 @@ collections:
           widget: object,
           expandItems: false,
           fields:
-            - label: Sliders
-              name: slider
-              required: true
-              widget: list
+            - label: Sliders,
+              name: slider,
+              required: true,
+              widget: list,
               fields:
                 [
                   {
-                    label: Image
-                    name: image
-                    required: false
+                    label: Image,
+                    name: image,
+                    required: false,
                     hint: "This is the images in that slides in home page"
-                    widget: image
+                    widget: image,
                   },
-                  { label: Title, name: title, required: true, widget: string }
-                  { label: Caption, name: caption, widget: string }
-                  { label: Button, name: button, required: true, widget: string }
-                  { label: URL, name: url, widget: string }
+                  { label: Title, name: title, required: true, widget: string },
+                  { label: Caption, name: caption, widget: string },
+                  { label: Button, name: button, required: true, widget: string },
+                  { label: URL, name: url, widget: string },
                 ],
         }
