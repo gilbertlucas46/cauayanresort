@@ -27,7 +27,8 @@ collections:
           name: home,
           widget: object,
           fields:
-            - {
+            [
+              {
                 label: Sliders,
                 name: slider,
                 required: true,
@@ -46,5 +47,6 @@ collections:
                     { label: URL, name: url, widget: string }
                   ],
               },
+            ]
         }
 
