@@ -106,9 +106,8 @@ collections:
   - name: "villas"
     label: "Our Villas Page"
     description: "Contain"s villas listings
-    folder: "src/pages/main"
     default: "src/pages/main/accommodation.md"
-    create: true
+    create: false
     fields:
       - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
       - { label: "Title", name: "title", widget: "string" }
