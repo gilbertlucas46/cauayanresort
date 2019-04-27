@@ -28,46 +28,22 @@ collections:
           widget: object,
           expandItems: false,
           fields:
-            [
-              {
-                label: Sliders,
-                name: slider,
-                required: true,
-                widget: list,
-                fields:
-                  [
-                    {
-                      label: Image,
-                      name: image,
-                      required: false,
-                      hint: "This is the images in that slides in home page",
-                      widget: image,
-                    },
-                    { label: Title, name: title, required: true, widget: string },
-                    { label: Caption, name: caption, widget: string },
-                    { label: Button, name: button, required: true, widget: string },
-                    { label: URL, name: url, widget: string }
-                  ],
-              },
-            ],
-            [
-              {
-                label: Image Navigation,
-                name: imagenav,
-                required: true,
-                widget: list,
-                fields:
-                  [
-                    {
-                      label: Image,
-                      name: image,
-                      required: false,
-                      hint: "navigation image in home page",
-                      widget: image,
-                    },
-                    { label: Title, name: title, required: true, widget: string },
-                    { label: URL, name: url, widget: string }
-                  ],
-              },
-            ]
+            - label: Sliders
+              name: slider
+              required: true
+              widget: list
+              fields:
+                [
+                  {
+                    label: Image
+                    name: image
+                    required: false
+                    hint: "This is the images in that slides in home page"
+                    widget: image
+                  },
+                  { label: Title, name: title, required: true, widget: string }
+                  { label: Caption, name: caption, widget: string }
+                  { label: Button, name: button, required: true, widget: string }
+                  { label: URL, name: url, widget: string }
+                ],
         }
