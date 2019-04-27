@@ -18,38 +18,48 @@ collections:
     label: "Pages"
     description: "Lists of all Main pages"
     folder: "src/pages/main"
-    expandItems: false
     create: true
-    slug: "{{slug}}"
     fields:
       - { label: "Main Pages", name: "templateKey", widget: "hidden", default: "mainpages" }
+      - { label: "Page Name", name: "pagname", widget: "string" }
       - {
-          label: "Home Page",
-          name: "home",
+          label: Sliders,
+          name: slider,
           required: true,
-          expandItems: false,
-          widget: "object",
+          widget: list,
           fields:
             [
-              { label: "Page", name: "pagename", widget: "hidden", default: "home" },
+              { label: Title, name: title, required: true, widget: string },
               {
-                label: Sliders,
-                name: slider,
-                required: true,
+                label: Image,
+                name: image,
+                required: false,
+                hint: "This is the images in that slides in home page",
+                widget: image,
+              },
+              {
+                label: Links,
+                name: links,
+                required: false,
                 widget: list,
                 fields:
                   [
-                    { label: Title, name: title, required: true, widget: string },
-                    {
-                      label: Image,
-                      name: image,
-                      required: false,
-                      hint: "This is the images in that slides in home page",
-                      widget: image,
-                    },
                     { label: Text, name: name, widget: string },
                     { label: URL, name: url, widget: string },
                   ],
-              }
+              },
+            ],
+        }
+      - {
+          label: "Location",
+          name: "location",
+          required: true,
+          widget: "object",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              { label: "Google Maps Link", name: "mapsLink", widget: "string" },
+              { label: "Latitude", name: "mapsLatitude", widget: "number", valueType: "float" },
+              { label: "Longitude", name: "mapsLongitude", widget: "number", valueType: "float" },
             ],
         }
