@@ -85,9 +85,9 @@ collections:
               {label: "Video Source", name: "source", widget: "text"}
             ],
         }
-  - name: "home"
-    label: "Home Page"
-    description: "Home Page"
+  - name: "about"
+    label: "About Page"
+    description: "About Page"
     folder: "src/pages/main"
     create: true
     fields:
