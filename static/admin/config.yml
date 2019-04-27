@@ -16,9 +16,8 @@ public_folder: /img/uploads
 collections:
   - name: "pages"
     label: "Pages"
-    description: "Lists of all Main pages"
-    folder: "src/pages/main"
-    expandItems: false
+    description: "Meetup dates, location, and presenter information."
+    folder: "src/pages/meetups"
     create: true
     fields:
       - { label: "Home Page", name: "home", widget: "hidden", default: "home" }
@@ -35,6 +34,7 @@ collections:
                 widget: list,
                 fields:
                   [
+                    { label: Title, name: title, required: true, widget: string },
                     {
                       label: Image,
                       name: image,
@@ -42,9 +42,7 @@ collections:
                       hint: "This is the images in that slides in home page",
                       widget: image,
                     },
-                    { label: Title, name: title, required: true, widget: string },
-                    { label: Caption, name: caption, widget: string },
-                    { label: Button, name: button, required: true, widget: string },
+                    { label: Text, name: name, widget: string },
                     { label: URL, name: url, widget: string }
                   ],
               },
