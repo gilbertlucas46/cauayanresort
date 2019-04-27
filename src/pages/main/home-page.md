@@ -1,6 +1,7 @@
 ---
 templateKey: meetup
 title: home page
+slug: "home page"
 slider:
   - button: Our Villas
     caption: >-
