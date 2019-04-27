@@ -41,5 +41,22 @@ collections:
               { label: Button, name: button,  widget: string },
               { label: URL, name: url, widget: string }
             ],
-        }
+        },
+        {
+          label: Image Nav,
+          name: imagenav,
+          widget: list,
+          fields:
+            [
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "image nav for home page",
+                widget: image,
+              },
+              { label: Title, name: title,  widget: string },
+              { label: URL, name: url, widget: string }
+            ],
+        },
 
