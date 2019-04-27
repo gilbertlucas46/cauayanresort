@@ -20,7 +20,11 @@ collections:
     folder: "src/pages/main"
     create: true
     fields:
-    - { label: "Main Page", name: "pages", required: true, widget: "object",
+    - { 
+        label: "Main Page", 
+        name: "pages", 
+        required: true, 
+        widget: "object",
         fields:
           [
           - { label: "page", name: "templateKey", widget: "hidden", default: "home" },
