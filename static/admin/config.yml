@@ -16,25 +16,26 @@ public_folder: /img/uploads
 collections:
   - name: "pages"
     label: "Pages"
-    description: "Meetup dates, location, and presenter information."
-    folder: "src/pages/meetups"
+    description: "Lists of all Main pages"
+    folder: "src/pages/main"
+    expandItems: false
     create: true
     fields:
       - { label: "Home Page", name: "home", widget: "hidden", default: "home" }
       - {
           label: Home,
           name: home,
+          expandItems: false,
           widget: object,
           fields:
             [
               {
                 label: Sliders,
                 name: slider,
-                required: true,
+                
                 widget: list,
                 fields:
                   [
-                    { label: Title, name: title, required: true, widget: string },
                     {
                       label: Image,
                       name: image,
@@ -42,10 +43,46 @@ collections:
                       hint: "This is the images in that slides in home page",
                       widget: image,
                     },
-                    { label: Text, name: name, widget: string },
+                    { label: Title, name: title,  widget: string },
+                    { label: Caption, name: caption, widget: string },
+                    { label: Button, name: button,  widget: string },
                     { label: URL, name: url, widget: string }
                   ],
               },
-            ]
+              {
+                label: Image Nav,
+                name: imagenav,
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "image nav for home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title,  widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
+              },
+              {
+                label: Video,
+                name: video,
+                widget: object,
+                fields:
+                  [
+                    {
+                      label: Play Button,
+                      name: button,
+                      required: false,
+                      hint: "Play button for home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title,  widget: string },
+                    { label: Caption, name: caption,  widget: string },
+                    {label: "Description", name: "description", widget: "text"}
+                  ],
+              }
+            ],
         }
-
