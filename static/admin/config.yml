@@ -20,7 +20,7 @@ collections:
     folder: "src/pages/main"
     create: true
     fields:
-    - { label: "Main Page", 
+    - { label: "Home", 
         name: "pages", 
         required: true, 
         widget: "object",
@@ -56,5 +56,5 @@ collections:
                     },
                   ],
               }
-          ]
+          ],
       }
