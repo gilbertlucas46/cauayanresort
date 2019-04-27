@@ -14,9 +14,9 @@ media_folder: static/img/uploads
 public_folder: /img/uploads
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    description: "Meetup dates, location, and presenter information."
+  - name: "home"
+    label: "Home Page"
+    description: "Home Page"
     folder: "src/pages/main"
     create: true
     fields:
