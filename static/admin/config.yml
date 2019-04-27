@@ -20,14 +20,15 @@ collections:
     folder: "src/pages/meetups"
     create: true
     fields:
-      - { label: "Home Page", name: "home", widget: "hidden", default: "home" }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
       - {
           label: Home,
           name: home,
+          required: true,
           widget: object,
           fields:
-            [
-              {
+            - {
                 label: Sliders,
                 name: slider,
                 required: true,
@@ -46,6 +47,5 @@ collections:
                     { label: URL, name: url, widget: string }
                   ],
               },
-            ]
         }
 
