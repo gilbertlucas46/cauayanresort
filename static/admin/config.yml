@@ -50,8 +50,8 @@ collections:
                   ],
               },
               {
-                label: Sliders,
-                name: slider,
+                label: Image Nav,
+                name: imagenav,
                 required: true,
                 widget: list,
                 fields:
@@ -60,12 +60,10 @@ collections:
                       label: Image,
                       name: image,
                       required: false,
-                      hint: "This is the images in that slides in home page",
+                      hint: "image nav for home page",
                       widget: image,
                     },
                     { label: Title, name: title, required: true, widget: string },
-                    { label: Caption, name: caption, widget: string },
-                    { label: Button, name: button, required: true, widget: string },
                     { label: URL, name: url, widget: string }
                   ],
               }
