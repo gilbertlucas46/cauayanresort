@@ -23,7 +23,7 @@ collections:
     - { label: "Main Page", name: "pages", required: true, widget: "object",
         fields:
           [
-          - { label: "page", name: "templateKey", widget: "hidden", default: "home" }
+          - { label: "page", name: "templateKey", widget: "hidden", default: "home" },
           - { label: "Page Name", name: "pagname", widget: "string" }
           - {
               label: Sliders,
