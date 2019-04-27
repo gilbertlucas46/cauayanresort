@@ -72,6 +72,13 @@ collections:
                 hint: "Play button for home page",
                 widget: image,
               },
+              {
+                label: Video BG,
+                name: videobg,
+                required: false,
+                hint: "Video BG",
+                widget: image,
+              },
               { label: Title, name: title,  widget: string },
               { label: Caption, name: caption,  widget: string },
               {label: "Description", name: "description", widget: "text"}
