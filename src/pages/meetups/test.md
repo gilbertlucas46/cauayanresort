@@ -1,6 +1,6 @@
 ---
 templateKey: meetup
-title: test
+title: home page
 slider:
   - name: test
     title: test
