@@ -24,7 +24,7 @@ collections:
         fields:
           [
           - { label: "page", name: "templateKey", widget: "hidden", default: "home" },
-          - { label: "Page Name", name: "pagname", widget: "string" }
+          - { label: "Page Name", name: "pagname", widget: "string" },
           - {
               label: Sliders,
               name: slider,
