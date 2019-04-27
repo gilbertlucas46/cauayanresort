@@ -19,7 +19,18 @@ video:
     A beach coastline and a picturesque stretch of white sand beach make up
     Cauayan Island Resort, a private island that’s tucked in the El Nido,
     Palawan… READ MORE
+  source: test
   title: Welcome To Cauayan Resort
   videobg: /img/uploads/video-bg.png
+about:
+  btname: Read more
+  description: >-
+    Cauayan Resort is a luxury resort that embodies the pristine beauty of its
+    natural surroundings and first class personalized services. Escape to a
+    paradise of tranquility and haven of comfort. Indulge yourself in a perfect
+    serene lifestyle  vacation.
+  image: /img/uploads/about-caruayan-hp.jpg
+  title: Our Private Island Resort
+  url: /about
 ---
 
