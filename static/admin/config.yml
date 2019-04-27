@@ -1,0 +1,63 @@
+backend:
+  name: github
+  branch: staging
+  repo: gilbertlucas46/cauayanresort
+  squash_merges: true
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+
+media_folder: static/img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    description: "Meetup dates, location, and presenter information."
+    folder: "src/pages/main"
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: Sliders,
+          name: slider,
+          required: true,
+          widget: list,
+          fields:
+            [
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "This is the images in that slides in home page",
+                widget: image,
+              },
+              { label: Title, name: title,  widget: string },
+              { label: Caption, name: caption, widget: string },
+              { label: Button, name: button,  widget: string },
+              { label: URL, name: url, widget: string }
+            ],
+        }
+      - {
+          label: Image Nav,
+          name: imagenav,
+          widget: list,
+          fields:
+            [
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "image nav for home page",
+                widget: image,
+              },
+              { label: Title, name: title,  widget: string },
+              { label: URL, name: url, widget: string }
+            ],
+        } 
+        
+
