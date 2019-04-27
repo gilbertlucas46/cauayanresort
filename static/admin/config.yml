@@ -16,12 +16,11 @@ public_folder: /img/uploads
 collections:
   - name: "pages"
     label: "Pages"
-    description: "Meetup dates, location, and presenter information."
-    folder: "src/pages/meetups"
+    description: "Lists of all Main pages"
+    folder: "src/pages/main"
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Home Page", name: "home", widget: "hidden", default: "home" }
       - {
           label: Home,
           name: home,
