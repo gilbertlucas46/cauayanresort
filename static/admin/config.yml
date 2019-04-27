@@ -26,8 +26,8 @@ collections:
           widget: object,
           fields:
             [
-              { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
-              { label: "Title", name: "title", widget: "string" }
+              { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" },
+              { label: "Title", name: "title", widget: "string" },
               {
                 label: Sliders,
                 name: slider,
@@ -47,7 +47,7 @@ collections:
                     { label: Button, name: button,  widget: string },
                     { label: URL, name: url, widget: string }
                   ],
-              }
+              },
               {
                 label: Image Nav,
                 name: imagenav,
@@ -64,7 +64,7 @@ collections:
                     { label: Title, name: title,  widget: string },
                     { label: URL, name: url, widget: string }
                   ],
-                }
+                },
                 {
                   label: Video,
                   name: video,
@@ -90,6 +90,6 @@ collections:
                       {label: "Description", name: "description", widget: "text"},
                       {label: "Video Source", name: "source", widget: "text"}
                     ],
-                  }
+                  },
             ]
         }
