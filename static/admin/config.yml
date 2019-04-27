@@ -19,6 +19,7 @@ collections:
     description: "Lists of all Main pages"
     folder: "src/pages/main"
     create: true
+    fields:
     - { label: "Main Page", name: "pages", required: true, widget: "object",
         fields:
           [
