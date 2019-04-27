@@ -17,7 +17,7 @@ collections:
   - name: "pages"
     label: "Pages"
     description: "Meetup dates, location, and presenter information."
-    folder: "src/pages/meetups"
+    folder: "src/pages/main"
     create: true
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
