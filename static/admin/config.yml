@@ -24,11 +24,10 @@ collections:
       - {
           label: Sliders,
           name: slider,
-          required: true,
           widget: list,
           fields:
             [
-              { label: Title, name: title, required: true, widget: string },
+              { label: Title, name: title, widget: string },
               {
                 label: Image,
                 name: image,
