@@ -18,6 +18,7 @@ collections:
     label: "Pages"
     description: "Lists of all Main pages"
     folder: "src/pages/main"
+    expandItems: false
     create: true
     fields:
       - { label: "Home Page", name: "home", widget: "hidden", default: "home" }
@@ -25,6 +26,7 @@ collections:
           label: Home,
           name: home,
           widget: object,
+          expandItems: false,
           fields:
             [
               {
