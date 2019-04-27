@@ -33,36 +33,35 @@ collections:
               { label: "Google Maps Link", name: "mapsLink", widget: "string" },
               { label: "Latitude", name: "mapsLatitude", widget: "number", valueType: "float" },
               { label: "Longitude", name: "mapsLongitude", widget: "number", valueType: "float" },
-              { label: "Page", name: "pagename", widget: "string", default: "home" }
-              field:
-                {
-                  label: Sliders,
-                  name: slider,
-                  required: true,
-                  widget: list,
-                  fields:
-                    [
-                      { label: Title, name: title, required: true, widget: string },
-                      {
-                        label: Image,
-                        name: image,
-                        required: false,
-                        hint: "This is the images in that slides in home page",
-                        widget: image,
-                      },
-                      {
-                        label: Links,
-                        name: links,
-                        required: false,
-                        widget: list,
-                        fields:
-                          [
-                            { label: Text, name: name, widget: string },
-                            { label: URL, name: url, widget: string },
-                          ],
-                      },
-                    ],
-                }
-            ],
-            
+              { label: "Page", name: "pagename", widget: "string", default: "home" },
+              fields:
+                - {
+                    label: Sliders,
+                    name: slider,
+                    required: true,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Title, name: title, required: true, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          required: false,
+                          hint: "This is the images in that slides in home page",
+                          widget: image,
+                        },
+                        {
+                          label: Links,
+                          name: links,
+                          required: false,
+                          widget: list,
+                          fields:
+                            [
+                              { label: Text, name: name, widget: string },
+                              { label: URL, name: url, widget: string },
+                            ],
+                        },
+                      ],
+                  }
+            ], 
         }
