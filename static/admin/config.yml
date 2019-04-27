@@ -14,29 +14,37 @@ media_folder: static/img/uploads
 public_folder: /img/uploads
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    description: "Lists of all Main pages"
-    folder: "src/pages/main"
+  - name: "meetups"
+    label: "Meetups"
+    description: "Meetup dates, location, and presenter information."
+    folder: "src/pages/meetups"
     create: true
     fields:
-      - { label: "Main Pages", name: "templateKey", widget: "hidden", default: "mainpages" }
-      - { label: "Page Name", name: "pagname", widget: "string" }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - {
-          label: Sliders,
-          name: slider,
+          label: Presenters,
+          name: presenters,
           required: true,
           widget: list,
           fields:
             [
-              { label: Title, name: title, required: true, widget: string },
+              { label: Name, name: name, required: true, widget: string },
+              {
+                label: Presentation Title,
+                name: presentationTitle,
+                required: false,
+                widget: string,
+              },
               {
                 label: Image,
                 name: image,
                 required: false,
-                hint: "This is the images in that slides in home page",
+                hint: "If an image isn't specified, a default headshot placeholder image will be used",
                 widget: image,
               },
+              { label: Text, name: text, required: true, widget: text },
               {
                 label: Links,
                 name: links,
@@ -44,8 +52,8 @@ collections:
                 widget: list,
                 fields:
                   [
-                    { label: Text, name: name, widget: string },
-                    { label: URL, name: url, widget: string },
+                    { label: Text, name: linkText, widget: string },
+                    { label: URL, name: linkURL, widget: string },
                   ],
               },
             ],
