@@ -6,6 +6,8 @@ slider:
     caption: test
     title: test
     url: tstts
+home:
+  title: test
 imagenav:
   - title: test
     url: test
