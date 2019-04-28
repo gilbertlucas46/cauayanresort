@@ -17,5 +17,6 @@ footernav:
           - num: 639195877350
     qlinks:
       - title: About Cauayan Resort
+        url: /about
 ---
 
