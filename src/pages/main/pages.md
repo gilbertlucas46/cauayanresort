@@ -5,7 +5,7 @@ home:
   imagenav:
     - image: /img/uploads/imagenav-our-villas.jpg
       title: Our Villas
-      url: /villas
+      url: villas
   slider:
     - button: Our Villas
       caption: >-
