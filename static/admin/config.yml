@@ -2,7 +2,7 @@ backend:
   name: github
   branch: staging
   repo: gilbertlucas46/cauayanresort
-  squash_merges: true
+  squash_merges: false
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
@@ -18,7 +18,7 @@ collections:
     label: "Page"
     description: "Page"
     folder: "src/pages/main"
-    create: true
+    create: false
     fields:
       - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
       - {
@@ -27,25 +27,6 @@ collections:
           widget: object,
           fields:
             [
-              {
-                label: Sliders,
-                name: slider,
-                required: true,
-                widget: list,
-                fields:
-                  [
-                    {
-                      label: Image,
-                      name: image,
-                      required: false,
-                      hint: "This is the images in that slides in home page",
-                      widget: image,
-                    },
-                    { label: Title, name: title,  widget: string },
-                    { label: Caption, name: caption, widget: string },
-                    { label: Button, name: button,  widget: string },
-                    { label: URL, name: url, widget: string }
-                  ],
-              }
+              { label: Title, name: title,  widget: string }
             ],
         }
