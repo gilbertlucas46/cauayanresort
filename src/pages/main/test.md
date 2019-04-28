@@ -8,6 +8,8 @@ slider:
     url: tstts
 home:
   title: test
+  home:
+    title: Print Design
 imagenav:
   - title: test
     url: test
