@@ -19,14 +19,13 @@ export default class VillasLayout extends Component {
 export const query = graphql`
    query PostQuery($slug: String!) {
     markdownRemark(frontmatter: {
-      slug: {
+      title: {
         eq: $slug
       }
     }) {
       html
       frontmatter {
         title
-        slug
       }
     }
   }
