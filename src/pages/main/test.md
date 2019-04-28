@@ -1,6 +1,6 @@
 ---
 key: mainpages
-title: test
+title: Pages
 home:
   title: test
   home:
