@@ -42,9 +42,25 @@ collections:
                 hint: "Video BG",
                 widget: image,
               },
-              { label: Title, name: title,  widget: string },
-              { label: Caption, name: caption,  widget: string },
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Video Source", name: "source", widget: "text"}
+              {
+                label: Sliders,
+                name: slider,
+                required: true,
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "This is the images in that slides in home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title,  widget: string },
+                    { label: Caption, name: caption, widget: string },
+                    { label: Button, name: button,  widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
+              }
             ],
         }
