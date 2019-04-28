@@ -21,13 +21,13 @@ collections:
     create: true
     fields:
       - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
-      - { label: "Title", name: "title", widget: "string" }
       - {
           label: Video,
           name: video,
           widget: object,
           fields:
             [
+              { label: "Title", name: "title", widget: "string" }
               {
                 label: Play Button,
                 name: button,
