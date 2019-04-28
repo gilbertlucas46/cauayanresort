@@ -1,8 +1,10 @@
 ---
 video:
-  caption: tsetsets
-  description: tsetsts
-  source: tsts
+  slider:
+    - button: test
+      caption: test
+      title: Fullstack Developement
+      url: tst
   title: steste
 ---
 
