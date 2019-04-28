@@ -1,8 +1,8 @@
 ---
-title: About page
-imagenav:
-  - image: /img/uploads/imagenav-our-villas.jpg
-    title: Our Villas
-    url: /villas
+video:
+  caption: tsetsets
+  description: tsetsts
+  source: tsts
+  title: steste
 ---
 
