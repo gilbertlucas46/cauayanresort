@@ -14,37 +14,38 @@ media_folder: static/img/uploads
 public_folder: /img/uploads
 
 collections:
-  - name: "home"
-    label: "Home Page"
-    description: "Home Page"
+  - name: "pages"
+    label: "Page"
+    description: "Page"
     folder: "src/pages/main"
     create: true
     fields:
       - { label: "Template Key", name: "key", widget: "hidden", default: "mainpages" }
       - {
-          label: Video,
-          name: video,
+          label: Home,
+          name: home,
           widget: object,
           fields:
             [
-              { label: "Title", name: "title", widget: "string" },
               {
-                label: Play Button,
-                name: button,
-                required: false,
-                hint: "Play button for home page",
-                widget: image,
-              },
-              {
-                label: Video BG,
-                name: videobg,
-                required: false,
-                hint: "Video BG",
-                widget: image,
-              },
-              { label: Title, name: title,  widget: string },
-              { label: Caption, name: caption,  widget: string },
-              {label: "Description", name: "description", widget: "text"},
-              {label: "Video Source", name: "source", widget: "text"}
+                label: Sliders,
+                name: slider,
+                required: true,
+                widget: list,
+                fields:
+                  [
+                    {
+                      label: Image,
+                      name: image,
+                      required: false,
+                      hint: "This is the images in that slides in home page",
+                      widget: image,
+                    },
+                    { label: Title, name: title,  widget: string },
+                    { label: Caption, name: caption, widget: string },
+                    { label: Button, name: button,  widget: string },
+                    { label: URL, name: url, widget: string }
+                  ],
+              }
             ],
         }
