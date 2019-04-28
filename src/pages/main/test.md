@@ -18,6 +18,6 @@ home:
 about:
   slider:
     - title: test
-  title: lagoon villa
+  title: About US
 ---
 
