@@ -15,8 +15,8 @@ public_folder: /img/uploads
 
 collections:
   - name: "pages"
-    label: "Main Page"
-    description: "Main Page"
+    label: "Main Pages"
+    description: "All Main Pages only"
     folder: "src/pages/main"
     create: true
     fields:
@@ -28,20 +28,6 @@ collections:
           fields:
             [
               { label: "Title", name: "title", widget: "string" },
-              {
-                label: Play Button,
-                name: button,
-                required: false,
-                hint: "Play button for home page",
-                widget: image,
-              },
-              {
-                label: Video BG,
-                name: videobg,
-                required: false,
-                hint: "Video BG",
-                widget: image,
-              },
               {
                 label: Sliders,
                 name: slider,
