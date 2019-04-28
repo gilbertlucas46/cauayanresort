@@ -2,6 +2,10 @@
 key: mainpages
 title: Pages
 home:
+  imagenav:
+    - image: /img/uploads/imagenav-our-villas.jpg
+      title: Our Villas
+      url: /villas
   slider:
     - button: Our Villas
       caption: >-
