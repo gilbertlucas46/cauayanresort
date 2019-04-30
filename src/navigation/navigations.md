@@ -1,6 +1,12 @@
 ---
 key: navigation
 title: Navigations
+topcontact:
+  add: 'Cauayan Island, Bacuit Bay El Nido Palawan'
+  email: reservations@cauayanresort.com
+  phone:
+    - num: 6327883082
+    - num: 639195877350
 topnav:
   - link: /
     title: home
