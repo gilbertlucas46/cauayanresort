@@ -2,7 +2,7 @@
 key: navigation
 title: Navigations
 topnav:
-  - title: /
+  - title: home
   - title: our villas
   - title: culinary experience
   - title: spa
