@@ -3,36 +3,6 @@ module.exports = {
     title: `Cauayan Resort`,
     description: `Cauayan Resort is a luxury resort that embodies the pristine beauty of its natural surroundings and first class personalized services. Escape to a paradise of tranquility and haven of comfort. Indulge yourself in a perfect serene lifestyle vacation.`,
     author: `lucas@gilbert.codes`,
-    menuLinks:[
-      {
-        name: "home",
-        link: "/"
-      },
-      {
-        name: "our villas",
-        link: "our villas"
-      },
-      {
-        name: "culinary experience",
-        link: "culinary experience"
-      },
-      {
-        name: "spa",
-        link: "spa"
-      },
-      {
-        name: "diving",
-        link: "diving"
-      },
-      {
-        name: "activities",
-        link: "activities"
-      },
-      {
-        name: "contact us",
-        link: "contact us"
-      },
-    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -56,8 +26,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/navigation`,
-        name: 'navigation',
+        path: `${__dirname}/src/navigations`,
+        name: 'navigations',
       }
     },
     {

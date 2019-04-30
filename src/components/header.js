@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 const HeaderWrapper = styled.div`
-  
+  display:block;
 `;
 const HeaderContent = styled.div`
   display: grid;
@@ -88,17 +88,18 @@ const Header = ({ menuLinks }) => (
         <div className="mainNav">
           <nav>
             <ul>
-            {data.markdownRemark.frontmatter.topnav.map(nav => (
-              <li key={nav.title.split(' ').join('-').toLowerCase()}>
-                <Link 
-                to={nav.title.split(' ').join('-').toLowerCase()} activeClassName="active" 
-                ria-label={`links to ${nav.title}`} 
-                alt={nav.name}>
-                <span>{nav.title}</span>
-                </Link>
-              </li>
-            ))}
-              <li><a href="https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla" aria-label='links to ${link.name}' alt="Book Now">Book Now</a></li>
+              {data.markdownRemark.frontmatter.topnav.map(nav => (
+                <li key={nav.title.split(' ').join('-').toLowerCase()}>
+                  <Link 
+                  to={nav.title.split(' ').join('-').toLowerCase()} activeClassName="active" 
+                  ria-label={`links to ${nav.title}`} 
+                  alt={nav.name}>
+                  <span>{nav.title}</span>
+                  </Link>
+                </li>
+              ))}
+              <li>
+              <a href={`https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla`} aria-label='links to Booking page' alt="Book Now">Book Now</a></li>
             </ul>
           </nav>
         </div>

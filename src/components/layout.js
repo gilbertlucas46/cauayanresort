@@ -17,14 +17,6 @@ const Layout = ({ children,location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
-          site {
-            siteMetadata {
-              menuLinks {
-                name
-                link
-              }
-            }
-          }
           allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/navigation/"}}) {
             edges {
               node {
@@ -41,7 +33,7 @@ const Layout = ({ children,location }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} menuLinks={data.site.siteMetadata.menuLinks}  socialChannels={data.site.siteMetadata.socialChannels} />
+        <Header/>
         <MainLayout>
           <Spring
           delay={300}

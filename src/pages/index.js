@@ -40,13 +40,11 @@ const IndexPage = ({location}) => (
         <Slider>
           {allMarkdownRemark.edges.map(edge => (
             edge.node.frontmatter.home.slider.map(slide => (
-             <Slider>
-                <li>
-                  <h1 className="title">{slide.title}</h1>
-                  <p>{slide.title}</p>
-                  <Link to={`/${slide.url}`}><a>{slide.button}</a></Link>
-                </li>
-             </Slider>
+              <li key={slide.title.split(' ').join('-').toLowerCase()}>
+                <h1 className="title">{slide.title}</h1>
+                <p>{slide.title}</p>
+                <Link to={`/${slide.url}`}>{slide.button}</Link>
+              </li>
             ))
           ))}
         </Slider>
