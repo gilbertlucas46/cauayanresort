@@ -12,19 +12,21 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               frontmatter {
-                slug
+                title
               }
             }
           }
         }
       }    
     `).then(results => {
+     
       results.data.allMarkdownRemark.edges.forEach(({node}) => {
+        const slug = `${node.frontmatter.title.split(' ').join('-').toLowerCase()}`
         createPage({
-          path: `/villas/${node.frontmatter.slug}`,
+          path: `/villas/${slug}`,
           component: path.resolve('./src/components/villasLayout.js'),
           context: {
-            slug: node.frontmatter.slug,
+            slug: `${slug}`,
           }
         });
       })

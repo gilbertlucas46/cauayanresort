@@ -26,6 +26,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/navigation`,
+        name: 'navigation',
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/villas`,
         name: 'villas',
       }
@@ -34,7 +41,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages/main`,
-        name: 'main',
+        name: 'mainpages',
       }
     },
     {
