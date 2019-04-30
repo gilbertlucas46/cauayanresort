@@ -74,6 +74,7 @@ const Header = ({ menuLinks }) => (
         frontmatter {
           topnav {
             title
+            link
           }
         }
       }
@@ -89,9 +90,9 @@ const Header = ({ menuLinks }) => (
           <nav>
             <ul>
               {data.markdownRemark.frontmatter.topnav.map(nav => (
-                <li key={nav.title.split(' ').join('-').toLowerCase()}>
+                <li key={nav.link}>
                   <Link 
-                  to={nav.title.split(' ').join('-').toLowerCase()} activeClassName="active" 
+                  to={nav.link} activeClassName="active" 
                   ria-label={`links to ${nav.title}`} 
                   alt={nav.name}>
                   <span>{nav.title}</span>
