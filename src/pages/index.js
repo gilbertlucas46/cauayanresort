@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Listings from "../components/listings"
 
@@ -32,8 +31,8 @@ const HOME_QUERY = graphql`
   }
 `;
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({location}) => (
+  <Layout location={location}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <StaticQuery
       query={HOME_QUERY}

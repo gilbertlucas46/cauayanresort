@@ -14,6 +14,90 @@ media_folder: static/img/uploads
 public_folder: /img/uploads
 
 collections:
+  - name: "navigation"
+    label: "All Navigation"
+    description: "All Navigation"
+    folder: "src/navigation"
+    create: true
+    fields:
+      - { label: "Template Key", name: "key", widget: "hidden", default: "navigation" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: Top Navigation,
+          name: topnav,
+          required: false,
+          widget: list,
+          fields:
+            [
+                { label: Title, name: title,  widget: string },
+            ],
+        }
+      - {
+          label: Footer Navigation,
+          name: footernav,
+          required: false,
+          widget: list,
+          fields:
+            [
+              {
+                label: Cauayan Logo,
+                name: cauayan,
+                required: false,
+                hint: "Logo in footer",
+                widget: image,
+              },
+              {
+                label: Newsletter,
+                name: newsletter,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { label: Message, name: msg,  widget: string },
+                  ],
+              },
+              {
+                label: Quick Links,
+                name: qlinks,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Title, name: title,  widget: string },
+                    { label: URL, name: url,  widget: string },
+                  ],
+              },
+              {
+                label: Contact Details,
+                name: contact,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Address, name: add,  widget: string },
+                    {
+                      label: Phone,
+                      name: phone,
+                      required: false,
+                      widget: list,
+                      fields:
+                        [
+                          { label: Number, name: num,  widget: number },
+                        ],
+                    },
+                    { label: Email, name: email,  widget: string },
+                  ],
+              },
+              {
+                label: Trip Advisory Logo,
+                name: advisory,
+                required: false,
+                hint: "Logo in footer",
+                widget: image,
+              }
+            ],
+        }
+
   - name: "accommodation"
     label: "Accommodations"
     description: "Accommodations Pages"
