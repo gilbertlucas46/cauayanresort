@@ -9,7 +9,6 @@ topnav:
   - title: diving
   - title: activities
   - title: contact us
-  - title: book now
 footernav:
   - advisory: /img/uploads/tripadvisory-footer.png
     cauayan: /img/uploads/cauayan-footer.png
