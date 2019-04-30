@@ -8,7 +8,7 @@ export default class VillasLayout extends Component {
     return (
       <Layout>
         <div>
-        {markdownRemark.frontmatter.title}
+        
         </div>
       </Layout>
     )
