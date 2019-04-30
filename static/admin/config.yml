@@ -22,6 +22,28 @@ collections:
     fields:
       - { label: "Template Key", name: "key", widget: "hidden", default: "navigation" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: Cauayan Logo, name: cauayan, required: false, hint: "Logo in navigation", widget: image, }
+      - {
+          label: Top Contact,
+          name: topcontact,
+          required: false,
+          widget: object,
+          fields:
+            [
+              {
+                label: Phone,
+                name: phone,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Number, name: num,  widget: number },
+                  ],
+              },
+              { label: Email, name: email,  widget: string },
+              { label: Address, name: add,  widget: string },
+            ],
+        }
       - {
           label: Top Navigation,
           name: topnav,
