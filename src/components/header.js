@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
@@ -64,29 +64,48 @@ const HeaderContent = styled.div`
   }
 `;
 
+
+
 const Header = ({ menuLinks }) => (
-  <HeaderWrapper>
-    <HeaderContent> 
-      <div className="logo">
-        test
-      </div>
-      <div className="mainNav">
-        <nav>
-          <ul>
-            {
-              menuLinks.map(link =>
-              <li key={link.name}>
-              <Link to={link.link.split(' ').join('-').toLowerCase()} activeClassName="active" aria-label={`links to ${link.name}`} alt={link.name}>
-                <span>{link.name}</span>
-              </Link>
-              </li>)
-            }
-            <li><a href="https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla" aria-label='links to ${link.name}' alt="Book Now">Book Now</a></li>
-          </ul>
-        </nav>
-      </div>
-    </HeaderContent>
-  </HeaderWrapper>
+  <StaticQuery
+  query={graphql`
+    query HeadingQuery {
+      markdownRemark{
+        frontmatter {
+          topnav {
+            title
+          }
+        }
+      }
+    }
+  `}
+  render={data => (
+    <HeaderWrapper>
+      <HeaderContent> 
+        <div className="logo">
+          test
+        </div>
+        <div className="mainNav">
+          <nav>
+            <ul>
+            {data.markdownRemark.frontmatter.topnav.map(nav => (
+              <li key={nav.title.split(' ').join('-').toLowerCase()}>
+                <Link 
+                to={nav.title.split(' ').join('-').toLowerCase()} activeClassName="active" 
+                ria-label={`links to ${nav.title}`} 
+                alt={nav.name}>
+                <span>{nav.title}</span>
+                </Link>
+              </li>
+            ))}
+              <li><a href="https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla" aria-label='links to ${link.name}' alt="Book Now">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </HeaderContent>
+    </HeaderWrapper>
+  )}
+/>
 )
 
 Header.propTypes = {

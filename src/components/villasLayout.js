@@ -7,11 +7,8 @@ export default class VillasLayout extends Component {
       const {markdownRemark} = this.props.data;
     return (
       <Layout>
-        <div dangerouslySetInnerHTML={ 
-            {
-                __html: markdownRemark.html
-            }
-        }/>
+        <div>
+        </div>
       </Layout>
     )
   }
