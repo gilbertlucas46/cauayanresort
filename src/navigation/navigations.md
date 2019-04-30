@@ -2,13 +2,20 @@
 key: navigation
 title: Navigations
 topnav:
-  - title: home
-  - title: our villas
-  - title: culinary experience
-  - title: spa
-  - title: diving
-  - title: activities
-  - title: contact us
+  - link: /
+    title: home
+  - link: our-villas
+    title: our villas
+  - link: culinary-experience
+    title: culinary experience
+  - link: spa
+    title: spa
+  - link: diving
+    title: diving
+  - link: activities
+    title: activities
+  - link: contact-us
+    title: contact us
 footernav:
   - advisory: /img/uploads/tripadvisory-footer.png
     cauayan: /img/uploads/cauayan-footer.png
