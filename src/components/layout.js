@@ -5,10 +5,10 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 import Header from "./header"
 
+import'./utils/fonts.css'
 
 const MainLayout = styled.main`
   max-width:100%;
- 
 `;
 
 
