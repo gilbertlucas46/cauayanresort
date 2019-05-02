@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import {useSpring, animated} from 'react-spring'
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
@@ -7,27 +7,43 @@ import styled from 'styled-components'
 const NavWrapper = styled.div`
     display:block;
     .logo{
-      max-width:84px;
       position:relative;
+      @media (max-width:991px){
+        margin-left:2rem;
+        max-width: 48px;
+      }
+      @media (min-width:992px){
+        max-width:84px;
+      }
     }
     .logo > div {
       margin: 1.155rem 0;
     }
   `;
   const NavContent = styled.div`
-    display: grid;
     background-color:#5C3327;
     position:relative;
     overflow:hidden;
-    min-height:6.5rem;
+    @media (min-width:992px){
+      min-height:6.5rem;
+    }
+    @media (max-width:991px){
+      min-height:5rem;
+    }
+    @media (max-width:1199px){
+      padding-right:0 !important;
+    }
     @media (min-width:1551px) {
-      grid-template-columns: 1fr 3fr; 
+      display: grid;
+      grid-template-columns: 1fr 2fr; 
     }
     @media (min-width:1440px) and (max-width:1550px) {
+      display: grid;
       grid-template-columns: 1fr 6fr; 
     }
     @media (min-width:1200px) and (max-width:1439px) {
       grid-template-columns: 1fr 6fr; 
+      display: grid;
     }
     &:before {
     content: '';
@@ -55,6 +71,25 @@ const NavWrapper = styled.div`
       padding-right: 1rem;
       padding-left: 3rem;
     }
+    @media (min-width:992px) and (max-width:1439px) {
+      padding-right: 1rem;
+      padding-left: 3rem;
+    }
+    .menu-button {
+      position: absolute;
+      right: 2rem;
+      top: 0;
+      bottom: 0;
+      z-index: 999;
+      font-family: 'Conv_CASTELAR';
+      color:white;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+      @media (min-width:1200px) {
+        display: none;
+      }
+    }
     .mainNav {
       display: flex;           /* establish flex container */
       flex-direction: column;  /* make main axis vertical */
@@ -62,22 +97,35 @@ const NavWrapper = styled.div`
       align-items: center; 
       position:relative;
       overflow:hidden;
+      @media (min-width:1200px) {
+        transform: none !important;
+      }
+      @media (max-width:1199px){
+        position: fixed;
+        height: 100vh;
+        z-index: 999;
+        background-color: #5C3327;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
       nav {
         width:100%;
         ul {
           width:100%;
-          @media (min-width:992px) {
-            flex-direction: row;
-            justify-content: space-between;
-          }
           list-style: none;
           margin: 0 auto;
           width: 100%;
           max-width: 1600px;
           padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          @media (min-width:1200px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+          }
+          @media (max-width:1199px) {
+            text-align:center;
+          }
           li {
             list-style-type:none;
             a {
@@ -111,6 +159,10 @@ const NavWrapper = styled.div`
 `;
 
 const navigation = () => {
+  const [isNavOpen, setNavOpen] = useState(false);
+  const navAnimation = useSpring({
+    transform: isNavOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`,
+  })
   const fade = useSpring({
     from: {
       opacity:0
@@ -119,7 +171,7 @@ const navigation = () => {
       opacity:1
     }
   });
-  console.log(fade)
+
   return (
   <StaticQuery
     query={graphql`
@@ -148,7 +200,7 @@ const navigation = () => {
           <div className="logo">
           <Img fluid={data.markdownRemark.frontmatter.cauayan.childImageSharp.fluid} />
           </div>
-          <div className="mainNav">
+          <animated.div className="mainNav" style={navAnimation}>
             <nav>
               <ul>
                 {data.markdownRemark.frontmatter.topnav.map(nav => (
@@ -165,7 +217,10 @@ const navigation = () => {
                 <a href={`https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla`} aria-label='links to Booking page' alt="Book Now"> <span>Book Now</span> </a></li>
               </ul>
             </nav>
-          </div>
+          </animated.div>
+          <button onClick={() => setNavOpen(!isNavOpen)} className='menu-button'>
+            MENU
+          </button>
         </NavContent>
       </NavWrapper>
     )}
@@ -175,3 +230,6 @@ const navigation = () => {
 
 
 export default navigation
+
+
+

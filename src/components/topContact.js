@@ -13,6 +13,9 @@ const TopContactWrapper = styled.div`
   }
   .topContact {
     background-color: #D6D1CA;
+    @media (max-width:992px) {
+      display:none;
+    }
     @media (min-width:1440px) {
       padding: 0 5rem;
     }
