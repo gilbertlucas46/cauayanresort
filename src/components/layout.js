@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Header from "./header"
 
 import'./utils/fonts.css'
+import '../components/utils/layout.css'
 
 const MainLayout = styled.main`
   max-width:100%;

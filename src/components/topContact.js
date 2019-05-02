@@ -75,34 +75,20 @@ const topContact = () => {
                 {data.markdownRemark.frontmatter.topcontact.phone.map(phone => (
                   <li key={phone.num}>
                   <span>
-                  <svg viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(-44.532 -8.208)" data-name="Group 2">
-                    <text transform="translate(44.532 24.208)" fill="#4b858e" fontFamily="cauayan" fontSize="16">
-                    <tspan x="0" y="0">e</tspan>
-                    </text>
-                    </g>
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17"><path d="M13.768 10.492c.1.1.2.3.2.5v2.3c0 .2-.1.3-.2.5-.1.1-.3.2-.5.2-3.1 0-5.8-1.1-8-3.3s-3.3-4.9-3.3-8c0-.2.1-.3.2-.5.1-.1.3-.2.5-.2h2.3c.2 0 .3.1.5.2.1.1.2.3.2.5 0 .8.1 1.6.4 2.4.1.3 0 .5-.2.7l-1.4 1.4a10.38 10.38 0 0 0 4.4 4.4l1.5-1.5c.1-.2.4-.2.7-.2.8.2 1.6.4 2.4.4 0 .1.2.1.3.2z" fill="#4b858e" /></svg>
                   </span>
                   {phone.num}
                   </li>
                 ))}
                 <li>
                   <span>
-                  <svg viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
-                    <text transform="translate(0 18)" fill="#4b858e" fontFamily="cauayan" fontSize="18">
-                    <tspan x="0" y="0">y</tspan>
-                    </text>
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19"><path d="M2.2 13.5V5l4.6 3.5-2.4 2.7.1.1 2.8-2.5L9 10.1l1.7-1.3 2.8 2.5.1-.1-2.4-2.7L15.8 5v8.5H2.2zM9 9.4L2.5 4.5h12.9L9 9.4z" fill="#4b858e" /></svg>
                   </span>
                   {data.markdownRemark.frontmatter.topcontact.email}
                 </li>
                 <li>
                   <span>
-                  <svg viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
-                    <text transform="translate(0 16)" fill="#4b858e" fontFamily="cauayan" fontSize="16">
-                    <tspan x="0" y="0">g</tspan>
-                    </text>
-                  </svg>  
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17"><path d="M12.5 5.5c0 1-.4 2.4-1.2 4.1s-1.5 2.9-2 3.6L8 15l-1.1-1.6c-.8-1.1-1.5-2.4-2.2-4-.8-1.5-1.2-2.9-1.2-3.9 0-1.2.4-2.3 1.3-3.2S6.8 1 8 1s2.3.4 3.2 1.3 1.3 1.9 1.3 3.2zm-3 0c0-.4-.1-.8-.4-1S8.4 4 8 4s-.8.2-1 .5-.4.6-.4 1 .1.8.4 1 .6.5 1 .5.8-.1 1-.4.5-.7.5-1.1z" fill="#4b858e" /></svg>  
                   </span>
                   {data.markdownRemark.frontmatter.topcontact.add}
                 </li>

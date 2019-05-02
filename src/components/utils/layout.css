@@ -199,6 +199,26 @@ html {
 *:after {
   box-sizing: inherit;
 }
+/* ----------- Non-Retina Screens ----------- */
+@media (min-height:  568px) and (max-height: 700px){
+  html {
+    font: 70%/1.45em Conv_CASTELAR, high-tide, Conv_majalla ;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font: 85%/1em Conv_CASTELAR, high-tide, Conv_majalla !important;
+  }
+  p {
+    line-height: 1.4 !important;
+  }
+}
+@media (min-width: 768px) and (max-width:1440px) {
+  html {
+    font: 100%/1.2em Conv_CASTELAR, high-tide, Conv_majalla  !important;
+  }
+}
 body {
   color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;

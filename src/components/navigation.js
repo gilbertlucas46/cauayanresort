@@ -128,6 +128,14 @@ const NavWrapper = styled.div`
           }
           li {
             list-style-type:none;
+            @media (max-width:767px){
+              margin-bottom:2.5rem;
+              a {
+                span {
+                  font-size: 1.5rem !important;
+                }
+              }
+            }
             a {
               position:relative;
               color:white;
