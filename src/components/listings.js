@@ -2,7 +2,6 @@ import React from "react"
 import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from "gatsby"
 
-import '../components/utils/layout.css'
 
 const LISTINGS_QUERY = graphql`
     query VillasListings {
