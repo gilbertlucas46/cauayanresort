@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img/uploads`,
+        name: 'uploads',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -43,13 +50,6 @@ module.exports = {
         path: `${__dirname}/src/pages/main`,
         name: 'mainpages',
       }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img/uploads`,
-        name: 'uploads',
-      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

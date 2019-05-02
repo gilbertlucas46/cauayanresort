@@ -37,9 +37,9 @@ const NavWrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 2fr; 
     }
-    @media (min-width:1440px) and (max-width:1679px) {
+    @media (min-width:1440px) and (max-width:1550px) {
       display: grid;
-      grid-template-columns: 1fr 3fr; 
+      grid-template-columns: 1fr 6fr; 
     }
     @media (min-width:1200px) and (max-width:1439px) {
       grid-template-columns: 1fr 6fr; 
@@ -56,11 +56,11 @@ const NavWrapper = styled.div`
       -webkit-transform: skewX(-20deg);
       transform: skewX(-20deg);
       right: -5rem;
-      @media (min-width:1300px) {
-        width: 14rem;
+      @media (min-width:1440px) {
+        width: 14.5rem;
       }
-      @media (min-width:1200px) and (max-width:1299px) {
-        width: 13rem;
+      @media (min-width:1200px) and (max-width:1439px) {
+        width: 12.5rem;
       }
     }
     @media (min-width:1440px) {

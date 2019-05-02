@@ -13,7 +13,7 @@ home:
         soul.
       image: /img/uploads/hero.jpg
       title: The art of laid back luxury
-      url: our-villas
+      url: villas
   title: home
 about:
   desc: >-
