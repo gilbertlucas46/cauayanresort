@@ -27,7 +27,7 @@ const MainLayout = styled.main`
       display: block;
       background: #5C3327;
       height: 52px;
-      width: 170px;
+      width: 200px;
       text-align: center;
       font-size: 1.2rem;
       line-height: 3.5rem;
@@ -44,7 +44,7 @@ const MainLayout = styled.main`
     svg {
       max-width: 0.5rem;
       position: absolute;
-      right: -70px;
+      right: -90px;
       bottom: -31px;
       transform: rotate(90deg);
       -webkit-transform: rotate(90deg);
@@ -52,7 +52,7 @@ const MainLayout = styled.main`
       -o-transform: rotate(90deg);
       filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       @media (max-width:767px){
-        right: -64px;
+        right: -78px;
       }
     }
   }
