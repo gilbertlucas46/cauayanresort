@@ -49,8 +49,6 @@ const Slide = styled.ul`
         font-size:5rem;
         font-weight:lighter;
         position:relative;
-        padding-bottom:1rem;
-       
         &:before {
           content: '';
           height: 0.2rem;
