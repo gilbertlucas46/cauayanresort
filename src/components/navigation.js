@@ -6,6 +6,24 @@ import styled from 'styled-components'
 
 const NavWrapper = styled.div`
     display:block;
+    a.bookNow {
+      display: block;
+      position: fixed;
+      z-index: 999;
+      width: 52px;
+      height: 215px;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      div {
+        box-shadow: 0 0 30px #00000066;
+        border-radius: 8px 0 0 8px;
+      }
+      @media(max-width:767px){
+        width:35px;
+      }
+    }
     .logo{
       position:relative;
       @media (max-width:991px){
@@ -187,6 +205,13 @@ const navigation = () => {
         markdownRemark{
           frontmatter {
             title
+            bookbutton{
+                childImageSharp{
+                  fluid(maxWidth:52){
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
+              }
             cauayan {
               childImageSharp{
                 fluid(maxWidth:100){
@@ -230,6 +255,13 @@ const navigation = () => {
             MENU
           </button>
         </NavContent>
+        <a 
+          href={`https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla`} 
+          aria-label='links to Booking page' 
+          className="bookNow"
+          alt="Book Now">
+          <Img fluid={data.markdownRemark.frontmatter.bookbutton.childImageSharp.fluid} />
+        </a>
       </NavWrapper>
     )}
   />
