@@ -2,7 +2,7 @@
 key: navigation
 title: Navigations
 cauayan: /img/uploads/cauayan-licon.png
-button: /img/uploads/book-buton.svg
+bookbutton: /img/uploads/book-buton.svg
 topcontact:
   add: 'Cauayan Island, Bacuit Bay El Nido Palawan'
   email: reservations@cauayanresort.com
