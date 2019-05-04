@@ -6,7 +6,6 @@ import './utils/fonts/high-tide/fonts.css';
 
 const Slide = styled.ul`
   margin:0;
-  z-index: -1;
   li.slideContainer {
     position:relative;
     .caption{

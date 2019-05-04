@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 const NavWrapper = styled.div`
     display:block;
-   
     a.bookNow {
       display: block;
       position: fixed;
@@ -198,26 +197,6 @@ const navigation = () => {
       opacity:1
     }
   });
-  if (typeof window !== 'undefined') {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      const maxScroll = document.body.clientHeight - window.innerHeight;
-      let currentScrollPos = window.pageYOffset;
-      const navBar = document.querySelector("#navbar");
-      if (
-          (maxScroll > 0 && prevScrollpos > currentScrollPos && prevScrollpos <= maxScroll) 
-        || (maxScroll <= 0 && prevScrollpos > currentScrollPos)
-        || (prevScrollpos <= 0 && currentScrollPos <= 0)
-        ) 
-      {
-        navBar.classList.add('fixed');
-      } else {
-        navBar.classList.remove('fixed');
-      }
-      prevScrollpos = currentScrollPos;
-    }
-  }
-
   return (
   <StaticQuery
     query={graphql`
@@ -248,7 +227,7 @@ const navigation = () => {
       }
     `}
     render={data => (
-      <NavWrapper id="navbar">
+      <NavWrapper>
         <NavContent> 
           <div className="logo">
           <Img fluid={data.markdownRemark.frontmatter.cauayan.childImageSharp.fluid} />

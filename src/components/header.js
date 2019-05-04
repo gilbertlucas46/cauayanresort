@@ -4,12 +4,14 @@ import PropTypes from "prop-types"
 import Navigation from './navigation'
 import TopContact from './topContact'
 
-const Header = () => (
-  <div>
-      <TopContact/>
-      <Navigation/>
-  </div>
-)
+const Header = () => {
+  return (
+    <div>
+        <TopContact/>
+        <Navigation/>
+    </div>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

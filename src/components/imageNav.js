@@ -37,9 +37,12 @@ const ImageNav = styled.div`
     font-size:2rem;
     color: #5C3327;
     font-weight: lighter;
+    margin: 3rem 0;
   }
   .navCont{
     position:relative;
+    border-radius: 4px;
+    overflow:hidden;
     .caption {
       display:flex;
       align-items:center;
@@ -56,10 +59,15 @@ const ImageNav = styled.div`
         height: 5rem;
         line-height: 5rem;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         width: 70%;
         text-align: center;
         position:relative;
+        transition: all .2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.36);
+        }
         @media (max-width:991px) {
           font-size: 1.1rem;
           width: 85%;
@@ -95,18 +103,19 @@ const NavMain  = styled.div`
   display:grid;
   max-width:1170px;
   margin:auto;
-
+  padding: 0 30px;
   @media (min-width:992px){
     grid-template-columns: 1fr 1fr;
     grid-gap:40px;
   }
   @media (max-width:991px){
-    padding: 0 30px;
+    
     grid-gap:20px;
   }
 `;
-const ImageNavigation = () => (
-  <StaticQuery
+const ImageNavigation = () => {
+  return (
+    <StaticQuery
     query={IMGNAV_QUERY}
     render={({allMarkdownRemark}) => (
         <>
@@ -132,8 +141,9 @@ const ImageNavigation = () => (
       )
       
     }
-  />
-)
+    />
+  )
+}
 
 export default ImageNavigation
 

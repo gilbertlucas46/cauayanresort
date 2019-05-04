@@ -5,7 +5,7 @@ home:
   imagenav:
     - image: /img/uploads/tab-our-villas-2x.png
       title: OUR VILLAS
-      url: villas
+      url: our-villas
     - image: /img/uploads/tab-culinary-2x.png
       title: CULINARY EXPERIENCE
       url: culinary-experience
