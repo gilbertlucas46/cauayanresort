@@ -10,7 +10,6 @@ const LISTINGS_QUERY = graphql`
                 node {
                     frontmatter {
                         title
-                        slug
                     }
                 }
             }
@@ -31,8 +30,8 @@ const Listings = () => (
             <h3>Listings</h3>
             <ListingsList>
             {allMarkdownRemark.edges.map(edge => (
-                <li key={edge.node.frontmatter.slug}>
-                <Link to={`/villas/${edge.node.frontmatter.slug}`}>
+                <li key={edge.node.frontmatter.title}>
+                <Link to={`/villas/${edge.node.frontmatter.title.split(' ').join('-').toLowerCase()}`}>
                     {edge.node.frontmatter.title}
                 </Link>
                 </li>

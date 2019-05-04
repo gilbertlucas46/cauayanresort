@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import './utils/fonts/high-tide/fonts.css';
-import { darken } from 'polished'
+
 const Slide = styled.ul`
   margin:0;
   li.slideContainer {
@@ -49,6 +49,8 @@ const Slide = styled.ul`
         font-size:5rem;
         font-weight:lighter;
         position:relative;
+        padding-bottom:1rem;
+       
         &:before {
           content: '';
           height: 0.2rem;

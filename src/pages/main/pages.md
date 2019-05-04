@@ -3,9 +3,24 @@ key: mainpages
 title: pages
 home:
   imagenav:
-    - image: /img/uploads/imagenav-our-villas.jpg
-      title: Our Villas
-      url: villas
+    - image: /img/uploads/tab-our-villas-2x.png
+      title: OUR VILLAS
+      url: our-villas
+    - image: /img/uploads/tab-culinary-2x.png
+      title: CULINARY EXPERIENCE
+      url: culinary-experience
+    - image: /img/uploads/tab-spa-2x.png
+      title: SPA
+      url: spa
+    - image: /img/uploads/tab-diving-2x.png
+      title: DIVING
+      url: diving
+    - image: /img/uploads/tab-activities-2x.png
+      title: ACTIVITIES
+      url: activities
+    - image: /img/uploads/tab-contact-2x.png
+      title: CONTACT US
+      url: contact-us
   slider:
     - button: Our Villas
       caption: >-
@@ -13,7 +28,7 @@ home:
         soul.
       image: /img/uploads/hero.jpg
       title: The art of laid back luxury
-      url: our-villas
+      url: villas
   title: home
 about:
   desc: >-

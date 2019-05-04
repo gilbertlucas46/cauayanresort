@@ -6,6 +6,24 @@ import styled from 'styled-components'
 
 const NavWrapper = styled.div`
     display:block;
+    a.bookNow {
+      display: block;
+      position: fixed;
+      z-index: 999;
+      width: 52px;
+      height: 215px;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      div {
+        box-shadow: 0 0 30px #00000066;
+        border-radius: 8px 0 0 8px;
+      }
+      @media(max-width:767px){
+        width:35px;
+      }
+    }
     .logo{
       position:relative;
       @media (max-width:991px){
@@ -37,9 +55,9 @@ const NavWrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 2fr; 
     }
-    @media (min-width:1440px) and (max-width:1679px) {
+    @media (min-width:1440px) and (max-width:1550px) {
       display: grid;
-      grid-template-columns: 1fr 3fr; 
+      grid-template-columns: 1fr 6fr; 
     }
     @media (min-width:1200px) and (max-width:1439px) {
       grid-template-columns: 1fr 6fr; 
@@ -56,11 +74,11 @@ const NavWrapper = styled.div`
       -webkit-transform: skewX(-20deg);
       transform: skewX(-20deg);
       right: -5rem;
-      @media (min-width:1300px) {
-        width: 14rem;
+      @media (min-width:1440px) {
+        width: 14.5rem;
       }
-      @media (min-width:1200px) and (max-width:1299px) {
-        width: 13rem;
+      @media (min-width:1200px) and (max-width:1439px) {
+        width: 12.5rem;
       }
     }
     @media (min-width:1440px) {
@@ -179,7 +197,6 @@ const navigation = () => {
       opacity:1
     }
   });
-
   return (
   <StaticQuery
     query={graphql`
@@ -187,6 +204,13 @@ const navigation = () => {
         markdownRemark{
           frontmatter {
             title
+            bookbutton{
+                childImageSharp{
+                  fluid(maxWidth:52){
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+                }
+              }
             cauayan {
               childImageSharp{
                 fluid(maxWidth:100){
@@ -230,6 +254,13 @@ const navigation = () => {
             MENU
           </button>
         </NavContent>
+        <a 
+          href={`https://redirect.fastbooking.com/DIRECTORY/dispoprice.phtml?showPromotions=1&Hotelnames=ASIAPHHTLCauayanIsla&Clusternames=ASIAPHHTLCauayanIsla`} 
+          aria-label='links to Booking page' 
+          className="bookNow"
+          alt="Book Now">
+          <Img fluid={data.markdownRemark.frontmatter.bookbutton.childImageSharp.fluid} />
+        </a>
       </NavWrapper>
     )}
   />
