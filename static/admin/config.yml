@@ -182,6 +182,32 @@ collections:
                       { label: Title, name: title,  widget: string },
                       { label: URL, name: url, widget: string }
                     ],
+                },
+                {
+                  label: Video,
+                  name: video,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: Button,
+                        name: button,
+                        required: false,
+                        hint: "Play Button",
+                        widget: image,
+                      },
+                      {
+                        label: Video Preview,
+                        name: image,
+                        required: false,
+                        hint: "Video Preview",
+                        widget: image,
+                      },
+                      { label: Title, name: title,  widget: string },
+                      { label: Sub Title, name: subtitle,  widget: string },
+                      { label: Description, name: desc, widget: markdown },
+                      { label: Video Embed, name: video, widget: markdown }
+                    ],
                 }
             ],
         }

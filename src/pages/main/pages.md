@@ -32,15 +32,13 @@ home:
   title: home
   video:
     button: /img/uploads/play-btn.png
-    image: /img/uploads/video-bg-2x.png
-    info: >-
-      ## Welcome To Cauayan Resort
-
-      ### Welcome To Cauayan Resort
-
+    desc: >-
       A beach coastline and a picturesque stretch of white sand beach make up
       Cauayan Island Resort, a private island that’s tucked in the El Nido,
-      Palawan… READ MORE
+      Palawan… [READ MORE](/about)
+    image: /img/uploads/video-bg-2x.png
+    subtitle: Welcome To Cauayan Resort
+    title: Welcome To Cauayan Resort
     video: >-
       <iframe width="560" height="315"
       src="https://www.youtube.com/embed/RAOd6cSQsr8" frameborder="0"

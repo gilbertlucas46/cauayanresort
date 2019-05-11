@@ -15,7 +15,6 @@ module.exports = {
         name: 'uploads',
       },
     },
-    
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -61,6 +60,7 @@ module.exports = {
         ],
       },
     },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
