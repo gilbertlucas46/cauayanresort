@@ -39,10 +39,7 @@ home:
     image: /img/uploads/video-bg-2x.png
     subtitle: Welcome To Cauayan Resort
     title: Welcome To Cauayan Resort
-    video: >-
-      <iframe  src="https://www.youtube.com/embed/RAOd6cSQsr8" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen></iframe>
+    video: '\`youtube: https://www.youtube.com/embed/RAOd6cSQsr8\`'
 about:
   desc: >-
     ### Our Private Island Resort
