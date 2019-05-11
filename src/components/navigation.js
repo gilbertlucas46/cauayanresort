@@ -146,6 +146,12 @@ const NavWrapper = styled.div`
           }
           li {
             list-style-type:none;
+            /* iPad in portrait & landscape */
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px)  { 
+              margin-bottom:3rem;
+            }
             @media (max-width:767px){
               margin-bottom:2.5rem;
               a {

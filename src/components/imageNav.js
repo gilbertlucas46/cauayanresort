@@ -104,12 +104,18 @@ const NavMain  = styled.div`
   max-width:1170px;
   margin:auto;
   padding: 0 30px;
+  /* iPad in portrait & landscape */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px)  { 
+    grid-template-columns: 1fr 1fr;
+    grid-gap:40px;
+  }
   @media (min-width:992px){
     grid-template-columns: 1fr 1fr;
     grid-gap:40px;
   }
   @media (max-width:991px){
-    
     grid-gap:20px;
   }
 `;
