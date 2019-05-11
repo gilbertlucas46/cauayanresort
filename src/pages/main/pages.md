@@ -40,8 +40,7 @@ home:
     subtitle: Welcome To Cauayan Resort
     title: Welcome To Cauayan Resort
     video: >-
-      <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/RAOd6cSQsr8" frameborder="0"
+      <iframe  src="https://www.youtube.com/embed/RAOd6cSQsr8" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen></iframe>
 about:
