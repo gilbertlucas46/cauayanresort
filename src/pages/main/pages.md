@@ -21,6 +21,15 @@ home:
     - image: /img/uploads/tab-contact-2x.png
       title: CONTACT US
       url: contact-us
+  intro:
+    desc: >-
+      Cauayan Resort is a luxury resort that embodies the pristine beauty of its
+      natural surroundings and first class personalized services. Escape to a
+      paradise of tranquility and haven of comfort. Indulge yourself in a
+      perfect serene lifestyle  vacation.
+    island: /img/uploads/about-caruayan-intro-2x.png
+    link: about
+    title: Our Private Island Resort
   slider:
     - button: Our Villas
       caption: >-
