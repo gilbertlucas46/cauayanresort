@@ -22,6 +22,16 @@ const VideoContainer = styled.div`
     margin: auto;
     display: block;
     height: 20rem;
+    /* tablet */
+    @media (min-width: 768px) and (max-width:1024px) {
+      height: 24rem;
+      padding: 0px 8rem;
+    }
+     /* mobile */
+     @media (max-width:767px) {
+      height: 26rem;
+    }
+
   }
   .caption{
     .playbutton{
@@ -119,6 +129,10 @@ const VideoContainer = styled.div`
     top:0;
     margin:auto;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.86);
+     /* mobile */
+    @media (max-width:767px) {
+      width: 85%;
+    }
     iframe {
       width: 100%;
       height: 100%;
@@ -145,9 +159,23 @@ const VIDEO_QUERY = graphql`
                     }
                   }
                 }
-                image{
+                desktop{
                   childImageSharp {
                     fluid(maxWidth:1920){
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                  }
+                }
+                tablet{
+                  childImageSharp {
+                    fluid(maxWidth:1100){
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    }
+                  }
+                }
+                mobile{
+                  childImageSharp {
+                    fluid(maxWidth:500){
                       ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                   }
@@ -183,7 +211,9 @@ const Video = () => {
             const vid = edge.node.frontmatter.home.video;
             return (
               <div className="vidContent" key="videoModal">
-              <Img fluid={vid.image.childImageSharp.fluid} />
+              <Img fluid={vid.desktop.childImageSharp.fluid} className='desktopView'/>
+              <Img fluid={vid.tablet.childImageSharp.fluid} className='tabletView'/>
+              <Img fluid={vid.mobile.childImageSharp.fluid} className='mobileView'/>
                 <div className="caption">
                   <div>
                     <button onClick={() => setNavOpen(!isNavOpen)} className='menu-button'>

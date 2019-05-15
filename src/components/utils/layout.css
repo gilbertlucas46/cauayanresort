@@ -644,3 +644,39 @@ pre tt:after {
     font-size: 100%;
   }
 }
+ /* desktop */
+ @media (min-width:1200px) {
+  .desktopView{
+    display:block;
+  }
+  .tabletView{
+    display:none;
+  }
+  .mobileView{
+    display:none;
+  }
+}
+/* tablet */
+@media (min-width:768px) and (max-width:1199px){
+  .desktopView{
+    display:none;
+  }
+  .tabletView{
+    display:block;
+  }
+  .mobileView{
+    display:none;
+  }
+}
+/* mobile */
+@media (max-width:767px){
+  .desktopView{
+    display:none;
+  }
+  .tabletView{
+    display:none;
+  }
+  .mobileView{
+    display:block;
+  }
+}
