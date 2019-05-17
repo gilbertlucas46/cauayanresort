@@ -78,7 +78,7 @@ const HomeContact = () => (
                   <textarea name="details" placeholder="Message" id="message" rows="8"></textarea>
                 </div>
                 <div className="form-group sendButton">
-                  <Button>Send</Button>
+                  <Button type="submit">Send</Button>
                 </div>
               </form>
             </div>
