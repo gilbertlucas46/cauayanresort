@@ -5,6 +5,7 @@ import Slider from '../components/slider'
 import ImageNav from '../components/imageNav'
 import Video from '../components/video'
 import Intro from '../components/intro'
+import HomeContact from '../components/homeContact'
 
 const IndexPage = ({location}) => (
   <Layout location={location}>
@@ -13,6 +14,7 @@ const IndexPage = ({location}) => (
     <ImageNav/>
     <Video/>
     <Intro/>
+    <HomeContact/>
   </Layout>
 )
 

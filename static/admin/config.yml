@@ -23,6 +23,7 @@ collections:
       - { label: "Template Key", name: "key", widget: "hidden", default: "navigation" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: Cauayan Logo, name: cauayan, required: false, hint: "Logo in navigation", widget: image, }
+      - { label: Book button, name: bookbutton, required: false, hint: "Floating Book Button", widget: image, }
       - {
           label: Top Contact,
           name: topcontact,
@@ -111,6 +112,32 @@ collections:
                     { label: Email, name: email,  widget: string },
                   ],
               },
+              {
+                label: Footer BG,
+                name: footerbg,
+                widget: object,
+                fields:
+                  [
+                    {
+                      label: Desktop view image,
+                      name: desktop,
+                      required: false,
+                      widget: image,
+                    },
+                    {
+                      label: Tablet view image,
+                      name: tablet,
+                      required: false,
+                      widget: image,
+                    },
+                    {
+                      label: Mobile view image,
+                      name: mobile,
+                      required: false,
+                      widget: image,
+                    },
+                  ],
+                },
               {
                 label: Trip Advisory Logo,
                 name: advisory,
@@ -240,7 +267,33 @@ collections:
                       { label: Description, name: desc, widget: markdown },
                       { label: Read more links to, name: link,  widget: string },
                     ],
-                }
+                },
+                {
+                  label: Contact Form BG,
+                  name: contact,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: Desktop view image,
+                        name: desktop,
+                        required: false,
+                        widget: image,
+                      },
+                      {
+                        label: Tablet view image,
+                        name: tablet,
+                        required: false,
+                        widget: image,
+                      },
+                      {
+                        label: Mobile view image,
+                        name: mobile,
+                        required: false,
+                        widget: image,
+                      },
+                    ],
+                },
             ],
         }
       - {
