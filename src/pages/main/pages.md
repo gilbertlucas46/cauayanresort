@@ -2,6 +2,10 @@
 key: mainpages
 title: pages
 home:
+  contact:
+    desktop: /img/uploads/contact-bg-desktop.jpg
+    mobile: /img/uploads/contact-bg-mobile.jpg
+    tablet: /img/uploads/contact-bg-tablet.jpg
   imagenav:
     - image: /img/uploads/tab-our-villas-2x.png
       title: OUR VILLAS
