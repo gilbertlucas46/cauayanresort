@@ -26,7 +26,7 @@ const IntroContainer = styled.div`
       }
       h4 {
         font-family: 'Conv_CASTELAR';
-        font-size:1.9rem;
+        font-size:1.8rem;
         font-weight: 300;
       }
 
