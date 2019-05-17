@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState, useEffect } from 'react';
 import {useSpring, animated} from 'react-spring'
 import { StaticQuery, graphql, Link } from "gatsby"
 import styled from 'styled-components'
@@ -195,12 +195,16 @@ const VIDEO_QUERY = graphql`
 `;
 
 const Video = () => {
+  
   const [isNavOpen, setNavOpen] = useState(false);
   const navAnimation = useSpring({
     transform: isNavOpen ? `scale(1)` : `scale(0)`,
-  })
-  const ModalClass = document.querySelector('html');
-  isNavOpen ? ModalClass.classList.add('modal-open') : ModalClass.classList.remove('modal-open');
+  });
+  
+  useEffect(() => {
+    const ModalClass = document.querySelector('html');
+    isNavOpen ? ModalClass.classList.add('modal-open') : ModalClass.classList.remove('modal-open');
+  });
   
   return (
     <StaticQuery
