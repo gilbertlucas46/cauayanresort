@@ -222,6 +222,24 @@ collections:
                       { label: Description, name: desc, widget: markdown },
                       { label: Video Embed, name: video, widget: markdown }
                     ],
+                },
+                {
+                  label: Short Intro About,
+                  name: intro,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: Island View,
+                        name: island,
+                        required: false,
+                        hint: "Top View Of Island",
+                        widget: image,
+                      },
+                      { label: Title, name: title,  widget: string },
+                      { label: Description, name: desc, widget: markdown },
+                      { label: Read more links to, name: link,  widget: string },
+                    ],
                 }
             ],
         }

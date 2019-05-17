@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import Header from "./header"
 import'./utils/fonts.css'
-import '../components/utils/layout.css'
+import '../components/utils/layout.scss'
 
 
 const MainLayout = styled.main`

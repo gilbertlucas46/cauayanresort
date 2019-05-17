@@ -30,6 +30,7 @@ const VideoContainer = styled.div`
      /* mobile */
      @media (max-width:767px) {
       height: 26rem;
+      padding: 0px 2rem;
     }
 
   }
