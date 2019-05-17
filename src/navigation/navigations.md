@@ -2,7 +2,6 @@
 key: navigation
 title: Navigations
 cauayan: /img/uploads/cauayan-licon.png
-bookbutton: /img/uploads/book-buton.png
 topcontact:
   add: 'Cauayan Island, Bacuit Bay El Nido Palawan'
   email: reservations@cauayanresort.com
@@ -33,6 +32,10 @@ footernav:
         phone:
           - num: 639195877350
           - num: 6327883082
+    footerbg:
+      desktop: /img/uploads/footer-bg-desktop.jpg
+      mobile: /img/uploads/footer-bg-mobile.jpg
+      tablet: /img/uploads/footer-bg-tablet.jpg
     newsletter:
       msg: >-
         Subscribe to our newsletter for news, updates, exclusive discounts and
@@ -40,5 +43,17 @@ footernav:
     qlinks:
       - title: About Cauayan Resort
         url: about
+      - title: Gallery
+        url: gallery
+      - title: Getting There
+        url: getting-there
+      - title: Special Offers
+        url: special-offers
+      - title: Terms and Conditions
+        url: terms-and-conditions
+      - title: FAQ’S
+        url: faq
+      - title: Careers
+        url: careers
 ---
 
