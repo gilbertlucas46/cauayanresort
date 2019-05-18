@@ -19,7 +19,7 @@ const FooterContainer = styled.div`
   }
   .tabletView{
     @media (min-width:768px) {
-      max-height: 1400px;
+      max-height: 1450px;
     }
   }
   .footerContents {
@@ -37,17 +37,20 @@ const FooterContainer = styled.div`
     @media (min-width:1200px) {
       padding: 0 4rem; 
     }
+    @media (max-width:767px) {
+      padding: 0 3rem; 
+    }
     .contents {
       position:relative;
-      @media (min-width:1200px) and (max-width: 1799px) {
-        display: grid;
+      @media (min-width:1200px)  {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 30px;
       }
       @media (min-width:768px) and (max-width: 1199px) {
-        display: grid;
         grid-template-columns: 1fr;
         grid-gap: 30px;
+      }
+      @media (min-width:768px){
+        display: grid;
       }
       @media (min-width:1800px) {
         grid-gap: 50px;
@@ -62,8 +65,10 @@ const FooterContainer = styled.div`
           height: 3.2rem;
           line-height:3.2rem;
           width: 100%;
-          max-width: 327px;
           border-radius: 4px;
+          @media (min-width:1200px) {
+            max-width: 327px; 
+          }
         }
         input {
           text-indent: 20px;
@@ -97,6 +102,9 @@ const FooterContainer = styled.div`
         }
       }
       .col {
+        @media (max-width:767px) {
+          margin-bottom:5rem ;
+        }
         .title {
           text-align:left;
           color:white;
@@ -106,6 +114,9 @@ const FooterContainer = styled.div`
           font-weight:300;
           position:relative;
           padding-bottom: 20px;
+          @media (max-width:992px) {
+            font-size:1.8rem;
+          }
           &:after{
             content: '';
             height:3px;
@@ -134,6 +145,10 @@ const FooterContainer = styled.div`
             font-family: 'Conv_majalla';
             text-decoration:none;
             font-size:1.4rem;
+            @media (max-width:992px) {
+              font-size:1.6rem;
+              line-height:1.8rem;
+            }
             &:hover{
               padding-left:40px;
               svg {
@@ -153,6 +168,10 @@ const FooterContainer = styled.div`
               font-family: 'Conv_majalla';
               text-decoration:none;
               font-size:1.4rem;
+              @media (max-width:992px) {
+                font-size:1.6rem;
+                line-height:1.8rem;
+              }
               &:visited{
                 color:white;
               }
@@ -170,6 +189,16 @@ const FooterContainer = styled.div`
         text-align: center;
         margin: 0 !important;
         height: 100%;
+      }
+      .cauayanIMG {
+        @media (max-width:767px) {
+          margin-bottom:6rem !important;
+        }
+      }
+      .tranvelersIMG{
+        @media (max-width:767px) {
+          margin-top:4rem !important;
+        }
       }
       .tranvelersIMG > div{
         max-width: 258px;
