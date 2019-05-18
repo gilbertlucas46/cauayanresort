@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useSpring, animated} from 'react-spring'
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql, } from "gatsby"
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 

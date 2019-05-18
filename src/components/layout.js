@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Header from "./header"
 import'./utils/fonts.css'
 import '../components/utils/layout.scss'
+import Footer from '../components/footer'
 
 
 const MainLayout = styled.main`
@@ -25,6 +26,7 @@ const Layout = ({ children,location }) => {
       {({opacity}) =>(
         <div style={{opacity}}>
         {children}
+        <Footer/>
         </div>
       )}
       </Spring>
