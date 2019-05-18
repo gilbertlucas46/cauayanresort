@@ -81,7 +81,7 @@ const Intro = () => (
       {allMarkdownRemark.edges.map(edge =>  {
         const welcome = edge.node.frontmatter.home.intro;
         return (
-          <div className="introContent container" key="IntroModal">
+          <div className="introContent col-2 container" key="IntroModal">
             <Img fluid={welcome.island.childImageSharp.fluid}/>
             <div className="desc">
               <div>

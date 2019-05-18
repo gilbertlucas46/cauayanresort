@@ -75,15 +75,15 @@ const Slide = styled.ul`
       a {
         position: relative;
         color:white;
-        height:2.8rem;
-        width: 8rem;
+        height:3.2rem;
+        width: 10rem;
         background-color: #5C3327;
-        line-height:2.8rem;
+        line-height:3.2rem;
         text-decoration:none;
         border-radius:4px;
         transition: background-color 0.5s ease;
         font-family: 'Conv_majalla';
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         &:hover {
           background-color: #48251b;
         }

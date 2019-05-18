@@ -680,13 +680,7 @@ pre tt:after {
     display:block;
   }
 }
-
-.container {
-  display:grid;
-  max-width:1170px;
-  margin:auto;
-  padding: 0 30px;
-  /* iPad in portrait & landscape */
+.col-2{
   @media only screen 
   and (min-device-width : 768px) 
   and (max-device-width : 1024px)  { 
@@ -697,6 +691,14 @@ pre tt:after {
     grid-template-columns: 1fr 1fr;
     grid-gap:40px;
   }
+}
+.container {
+  display:grid;
+  max-width:1170px;
+  margin:auto;
+  padding: 0 30px;
+  /* iPad in portrait & landscape */
+  
   @media (max-width:991px){
     grid-gap:20px;
   }

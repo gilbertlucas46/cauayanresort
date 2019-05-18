@@ -110,7 +110,7 @@ const ImageNavigation = () => {
         <>
         <ImageNav>
         <h3>Explore Cauayan Resort</h3>
-          <NavMain className="container">
+          <NavMain className="container col-2">
             {allMarkdownRemark.edges.map((edge) => {
               const navs = edge.node.frontmatter.home;
               return (
