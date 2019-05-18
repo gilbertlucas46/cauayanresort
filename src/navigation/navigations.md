@@ -56,5 +56,11 @@ footernav:
         url: faq
       - title: Careers
         url: careers
+social:
+  - name: google
+  - name: instagram
+  - name: facebook
+  - name: linkedin
+  - name: tripadvisory
 ---
 
