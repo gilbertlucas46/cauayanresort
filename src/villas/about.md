@@ -35,5 +35,23 @@ listings:
       bed, indoor sunken tub, and outdoor shower with a private garden.
     size: 68.5 sqm
     title: BEACH FRONT VILLA
+  - desc: >-
+      Cherish your private time and be surrounded by nature’s own artworks. This
+      villa provides a picture-perfect spot to view the El Nido sunrise, and the
+      limestone formations artfully illuminated at night.
+    size: 220 sqm
+    title: Sunrise Cauayan Pool Villa
+  - desc: >-
+      Feel renewed by the breeze from this villa perched on top of a hill. The
+      Resort View Cauayan Pool Villa offers you an astounding view of the resort
+      and the island’s flora from its private deck and infinity pool.
+    size: 220 sqm
+    title: Resort View Cauayan Pool Villa
+  - desc: >-
+      Add another meaning to the word tranquility by staying in this villa
+      overlooking the bay. Lounge on the deck and watch how the horizon changes
+      colors throughout the day.
+    size: 220 sqm
+    title: Bayview Cauayan Pool Villa
 ---
 
