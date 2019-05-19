@@ -57,10 +57,15 @@ footernav:
       - title: Careers
         url: careers
 social:
-  - name: google
-  - name: instagram
-  - name: facebook
-  - name: linkedin
-  - name: tripadvisory
+  - icons: /img/uploads/google.inline.svg
+    name: google
+  - icons: /img/uploads/instagram.inline.svg
+    name: instagram
+  - icons: /img/uploads/facebook.inline.svg
+    name: facebook
+  - icons: /img/uploads/linkedin.inline.svg
+    name: linkedin
+  - icons: /img/uploads/tripadvisory.inline.svg
+    name: tripadvisory
 ---
 
