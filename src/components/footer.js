@@ -9,6 +9,7 @@ import Mail from '../images/icons/mail.inline.svg'
 import Phone from '../images/icons/phone.inline.svg'
 import Pin from '../images/icons/pin.inline.svg'
 
+import CopyRight from '../components/copyRight'
 
 const FooterContainer = styled.div`
   position: relative;
@@ -288,7 +289,6 @@ const Footer = () => {
     query={FOOTER_QUERY}
     render={({allMarkdownRemark}) => (
       <>
-        
         {allMarkdownRemark.edges.map(edge =>  {
           const footNav = edge.node.frontmatter.footernav[0];
           return (
@@ -352,6 +352,7 @@ const Footer = () => {
             </FooterContainer>
           )
         })}
+       <CopyRight/>
       </>
     )}/>
   )

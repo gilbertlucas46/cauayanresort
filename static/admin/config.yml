@@ -147,6 +147,26 @@ collections:
               }
             ],
         }
+      -  {
+            label: Social Channels,
+            name: social,
+            widget: list,
+            fields:
+              [
+                {
+                  label: Social Links,
+                  name: name,
+                  required: false,
+                  widget: "string",
+                },
+                {
+                  label: Social Icons,
+                  name: icons,
+                  required: false,
+                  widget: image,
+                }
+              ],
+          }
 
   - name: "accommodation"
     label: "Accommodations"
