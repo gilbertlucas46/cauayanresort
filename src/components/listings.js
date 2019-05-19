@@ -5,16 +5,21 @@ import { StaticQuery, graphql, Link } from "gatsby"
 
 const LISTINGS_QUERY = graphql`
     query VillasListings {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        title
-                    }
-                }
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/villas/"}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            desc
+            listings{
+              title
+              size
             }
+          }
         }
+      }
     }
+  }
 `;
 
 const ListingsList = styled.ul`
