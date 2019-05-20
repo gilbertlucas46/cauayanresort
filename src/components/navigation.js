@@ -195,14 +195,7 @@ const navigation = () => {
   const navAnimation = useSpring({
     transform: isNavOpen ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`,
   })
-  const fade = useSpring({
-    from: {
-      opacity:0
-    },
-    to: {
-      opacity:1
-    }
-  });
+
   return (
   <StaticQuery
     query={graphql`
@@ -245,7 +238,7 @@ const navigation = () => {
                   <li key={nav.link}>
                     <Link 
                     to={nav.link} activeClassName="active" 
-                    ria-label={`links to ${nav.title}`} 
+                    aria-label={`links to ${nav.title}`} 
                     alt={nav.name}>
                     <span>{nav.title}</span>
                     </Link>

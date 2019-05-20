@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from "gatsby"
-import Button from '../components/utils/button'
+import {Button} from '../components/utils/button'
 
 const ContactContainer = styled.div`
   margin-top:5rem;

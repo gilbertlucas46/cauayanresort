@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
+import {ButtonLink} from '../components/utils/button'
 
 const LISTINGS_QUERY = graphql`
     query VillasListings{
@@ -32,34 +33,23 @@ const VillasContainer = styled.div`
   text-align:center;
 `;
 
-const ViewDetails = styled.a`
-  font-family: 'Conv_majalla';
+const ViewDetails = styled.div`
   display:block;
   margin:auto;
-  transition: all .2s ease-in-out;
   @media (min-width: 768px) {
    max-width: 220px; 
   }
   @media (max-width: 767px) {
    max-width: 90%; 
   }
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1)
-  }
-  a {
-    color:white;
-    text-decoration:none;
+  span {
     font-size:1.6rem;
-    display:block;
     line-height:3rem;
     height: 3rem;
-    background-color: #5C3327;
-    color:white;
     border-radius:3rem;
-    &:hover {
-      background-color: #2B1109;
-    }
+  }
+  a {
+    text-decoration:none;
   }
 `;
 const Card =  styled.div`
@@ -114,12 +104,14 @@ const Listings = () => (
                     </div>
                     <div className="info">
                       <h4>
-                        <Link to={`/villas/${edge.node.frontmatter.title.split(' ').join('-').toLowerCase()}`}> {edge.node.frontmatter.title} </Link>
+                        <Link aria-label={edge.node.frontmatter.title} to={`/villas/${edge.node.frontmatter.title.split(' ').join('-').toLowerCase()}`}> {edge.node.frontmatter.title} </Link>
                       </h4>
                       <h5>Size: {edge.node.frontmatter.size}</h5>
                     </div>
                     <ViewDetails>
-                      <Link to={`/villas/${edge.node.frontmatter.title.split(' ').join('-').toLowerCase()}`}> View Details</Link>
+                      <Link aria-label={edge.node.frontmatter.title} to={`/villas/${edge.node.frontmatter.title.split(' ').join('-').toLowerCase()}`}>
+                        <ButtonLink >View Details</ButtonLink>
+                      </Link>
                     </ViewDetails>
                   </Card>
 
