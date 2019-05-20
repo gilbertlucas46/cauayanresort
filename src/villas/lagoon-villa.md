@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-lagoon-villa.jpg
 title: LAGOON VILLA
 size: 55-sqm
 desc: >-
