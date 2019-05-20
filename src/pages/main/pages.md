@@ -41,7 +41,7 @@ home:
         soul.
       image: /img/uploads/hero.jpg
       title: The art of laid back luxury
-      url: villas
+      url: our-villas
   title: home
   video:
     button: /img/uploads/play-btn.png
