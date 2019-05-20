@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-bayview-cauayan-pool-villa.jpg
 title: Bayview Cauayan Pool Villa
 size: 220 sqm
 desc: >-
