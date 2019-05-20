@@ -2,6 +2,7 @@
 image: /img/uploads/villa-beach-front-villa.jpg
 title: BEACH FRONT VILLA
 size: 68.5 sqm
+villasort: 4
 desc: >-
   Take in the complementary shades of the powdery white sand and the blue waters
   of the ocean from your veranda’s daybed— mere steps away from the shoreline.
