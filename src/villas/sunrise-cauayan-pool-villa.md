@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-sunrise-cauayan-pool-villa.jpg
 title: Sunrise Cauayan Pool Villa
 size: 220 sqm
 desc: >-
