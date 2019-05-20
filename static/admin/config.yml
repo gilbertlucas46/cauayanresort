@@ -185,6 +185,22 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Size", name: "size", widget: "string" }
       - { label: "About Description", name: desc, widget: 'markdown' }
+      - {
+          label: Image Slider,
+          name: slider,
+          required: true,
+          widget: list,
+          fields:
+            [
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "This is the images in that slides in villa view",
+                widget: image,
+              }
+            ]
+          }
 
   - name: "mainpages"
     label: "Main Pages"
