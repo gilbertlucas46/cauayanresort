@@ -6,12 +6,15 @@ export default class VillasLayout extends Component {
   render() {
       const {allMarkdownRemark} = this.props.data;
       const { location } = this.props;
-      console.log(location)
     return (
-      <Layout location={location}>
-        <div>
-         
-        </div>
+      <Layout location={location} >
+        {allMarkdownRemark.edges.map(nodes => {
+          return (
+            <div className="container">
+              {nodes.node.frontmatter.title}
+            </div>
+          )
+        })}
       </Layout>
     )
   }
@@ -23,13 +26,20 @@ export const query = graphql`
       }}){
     edges{
       node{
-        frontmatter{
+        frontmatter {
           title
+          desc
+          size
+          image {
+            childImageSharp {
+              fluid(maxWidth: 652) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
         }
       }
     }
   }
 }
 `
-
-

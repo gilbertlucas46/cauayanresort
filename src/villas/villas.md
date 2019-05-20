@@ -1,8 +1,8 @@
 ---
+villasort: 1
 image: /img/uploads/villa-beach-view-villa.jpg
 title: BEACH VIEW VILLA
 size: 55-sqm
-villasort: 1
 desc: >-
   Wake up to both views of the tranquil beach and the lush flora of the island.
   The Beach View Villa offers a 55-sqm space with twin beds, outdoor shower, and
