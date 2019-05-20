@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-resort-view-cauayan-pool-villa.jpg
 title: Resort View Cauayan Pool Villa
 size: 220 sqm
 desc: >-
