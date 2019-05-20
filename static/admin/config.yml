@@ -172,22 +172,19 @@ collections:
     label: "Accommodations"
     description: "Accommodations Pages"
     folder: "src/villas"
-    create: false
+    create: true
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: Page Description, name: desc, widget: 'markdown' }
       - {
-          label: Listings,
-          name: listings,
+          label: Image,
+          name: image,
           required: false,
-          widget: list,
-          fields:
-            [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Size", name: "size", widget: "string" },
-              { label: About Description, name: desc, widget: 'markdown' },
-            ],
-      }
+          hint: "Image of the accommodation/unit/room",
+          widget: image,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Size", name: "size", widget: "string" }
+      - { label: "About Description", name: desc, widget: 'markdown' }
+
   - name: "mainpages"
     label: "Main Pages"
     description: "Main Pages"

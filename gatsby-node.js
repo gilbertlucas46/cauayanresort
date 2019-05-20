@@ -6,22 +6,22 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                title
-              }
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/villas/"}}) {
+        edges {
+          node {
+            frontmatter {
+              title
             }
           }
         }
-      }    
+      }
+      }   
     `).then(results => {
      
       results.data.allMarkdownRemark.edges.forEach(({node}) => {
-        const slug = `${node.frontmatter.title.split(' ').join('-').toLowerCase()}`
+        const slug = `${node.frontmatter.title}`
         createPage({
-          path: `/villas/${slug}`,
+          path: `/villas/${slug.split(' ').join('-').toLowerCase()}`,
           component: path.resolve('./src/components/villasLayout.js'),
           context: {
             slug: `${slug}`,

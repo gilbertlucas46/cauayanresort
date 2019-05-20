@@ -321,7 +321,7 @@ const Footer = () => {
                     <ul>
                       {footNav.qlinks.map(qlink => {
                         return (
-                          <li>
+                          <li key={qlink.url}>
                             <Play/><Link to={qlink.url}>{qlink.title}</Link>
                           </li>
                         )

@@ -11,10 +11,7 @@ const LISTINGS_QUERY = graphql`
           frontmatter {
             title
             desc
-            listings{
-              title
-              size
-            }
+            size
           }
         }
       }

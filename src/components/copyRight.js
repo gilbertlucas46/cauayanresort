@@ -64,7 +64,6 @@ const CopyRight = () => {
       <>
         {allMarkdownRemark.edges.map(edge =>  {
           const links = edge.node.frontmatter.social
-          console.log(links)
           return (
             <CopyContainer key="copy">
               <ul>

@@ -4,11 +4,13 @@ import { graphql } from "gatsby"
 
 export default class VillasLayout extends Component {
   render() {
-      const {markdownRemark} = this.props.data;
+      const {allMarkdownRemark} = this.props.data;
+      const { location } = this.props;
+      console.log(location)
     return (
-      <Layout>
+      <Layout location={location}>
         <div>
-        
+         
         </div>
       </Layout>
     )
@@ -16,17 +18,18 @@ export default class VillasLayout extends Component {
 }
 export const query = graphql`
    query PostQuery($slug: String!) {
-    markdownRemark(frontmatter: {
-      title: {
-        eq: $slug
-      }
-    }) {
-      html
-      frontmatter {
-        title
+     allMarkdownRemark(filter: {
+      frontmatter:  { title: { eq:$slug}
+      }}){
+    edges{
+      node{
+        frontmatter{
+          title
+        }
       }
     }
   }
+}
 `
 
 
