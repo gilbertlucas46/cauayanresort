@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-beach-front-villa.jpg
 title: BEACH FRONT VILLA
 size: 68.5 sqm
 desc: >-

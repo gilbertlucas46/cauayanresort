@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-water-villa.jpg
 title: WATER VILLA
 size: 56.5 sqm
 desc: >-

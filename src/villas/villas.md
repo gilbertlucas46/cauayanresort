@@ -1,4 +1,5 @@
 ---
+image: /img/uploads/villa-beach-view-villa.jpg
 title: BEACH VIEW VILLA
 size: 55-sqm
 desc: >-
