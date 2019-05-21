@@ -9,5 +9,12 @@ desc: >-
   are one with the island’s natural visual offerings. This 55-sqm villa has a
   queen-size bed, wooden terrace with a lounge bed, indoor sunken tub, and
   outdoor shower for the complete serene experience.
+slider:
+  - image: /img/uploads/LAGOON VILLA Main.jpg
+  - image: /img/uploads/LAGOON VILLA 30.jpg
+  - image: /img/uploads/LAGOON VILLA .JPG
+  - image: /img/uploads/LAGOON VILLA 31.jpg
+  - image: /img/uploads/LAGOON VILLA 4.jpg
+  - image: /img/uploads/LAGOON VILLA12.jpg
 ---
 
