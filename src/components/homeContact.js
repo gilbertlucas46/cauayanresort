@@ -100,6 +100,7 @@ const ContactContainer = styled.div`
       left:0;
       margin:auto;
       width:100%;
+      display:grid;
     }
   }
 `;

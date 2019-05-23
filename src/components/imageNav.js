@@ -100,7 +100,11 @@ const ImageNav = styled.div`
   }
 `;
 const NavMain  = styled.div`
-  
+   @media (max-width: 991px) {
+    .navCont {
+      margin-bottom: 1rem;
+    }
+  }
 `;
 const ImageNavigation = () => {
   return (

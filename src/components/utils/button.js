@@ -6,7 +6,6 @@ const ButtonContainer = styled.button`
   color:white;
   background-color:#5C3327;
   display:block;
-  width:243px;
   line-height: 3.6rem;
   text-align:center;
   font-size: 1.8rem;
@@ -19,7 +18,6 @@ const ButtonLinkContainer = styled.span`
   color:white;
   background-color:#5C3327;
   display:block;
-  width:243px;
   line-height: 3.6rem;
   text-align:center;
   font-size: 1.8rem;

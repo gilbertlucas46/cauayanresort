@@ -5,11 +5,9 @@ import Img from 'gatsby-image'
 
 //icons
 import Play from '../images/icons/play.inline.svg'
-import Mail from '../images/icons/mail.inline.svg'
-import Phone from '../images/icons/phone.inline.svg'
-import Pin from '../images/icons/pin.inline.svg'
 
 import CopyRight from '../components/copyRight'
+import ContactInfo from '../components/contactInfo'
 
 const FooterContainer = styled.div`
   position: relative;
@@ -238,13 +236,6 @@ const FOOTER_QUERY = graphql`
               title
               url
             }
-            contact{
-              add
-              phone{
-                num
-              }
-              email
-            }
             advisory{
               childImageSharp{
                 fluid(maxWidth:300){
@@ -328,22 +319,7 @@ const Footer = () => {
                       })}
                     </ul>
                   </div>
-                  <div className="col contact">
-                    <h5 className="title">CONTACT DETAILS</h5>
-                    <ul>
-                      <li><Pin/>{footNav.contact[0].add}</li>
-                      {footNav.contact.map(nums => {
-                        return (
-                          nums.phone.map(contactnum => {
-                            return (
-                              <li key={contactnum.num}><Phone/>{contactnum.num}</li>
-                            )
-                          })
-                        )
-                      })}
-                      <li><Mail/>{footNav.contact[0].email}</li>
-                    </ul>
-                  </div>
+                  <ContactInfo/>
                   <div className="tranvelersIMG">
                     <Img fluid={footNav.advisory.childImageSharp.fluid}/>
                   </div>
