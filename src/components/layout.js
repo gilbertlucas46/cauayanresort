@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Header from "./header"
 import'./utils/fonts.css'
 import '../components/utils/layout.scss'
+import BreadCrumbs from '../components/utils/breadcrumbs'
 import Footer from '../components/footer'
 
 
@@ -13,10 +14,16 @@ const MainLayout = styled.main`
   max-width:100%;
 `;
 
+
 const Layout = ({ children,location }) => {
   return (
     <div>
     <Header/>
+    {
+      (location.pathname !== '/')
+      ? <BreadCrumbs location={location}/>
+      : ""
+    }
     <MainLayout>
       <Spring
       delay={300}

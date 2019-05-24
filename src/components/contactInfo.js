@@ -56,9 +56,7 @@ const ContactInfoContainer = styled.div`
         margin:auto;
         position:absolute;
         transition: all ease-out  0.5s;
-        path {
-          fill: #5C3327;
-        }
+        
       }
       a {
        

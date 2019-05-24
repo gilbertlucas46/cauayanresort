@@ -11,23 +11,6 @@ import "slick-carousel/slick/slick-theme.css";
 import ContactInfo from '../components/contactInfo'
 
 const VillaSlider = styled.div`
-  
-  .col.contact{
-    li {
-      padding-left:38px;
-      transition: all ease-out  0.2s;
-      svg {
-        max-width:22px;
-        transition: all ease-out  0.5s;
-      }
-      &:hover{
-          padding-left:48px;
-          svg {
-            left: 10px;
-          }
-        }
-    }
-  }
   @media(min-width: 1600px){
     max-width:724px;
   }
@@ -124,6 +107,25 @@ const VillasContainer = styled.div`
         text-align:center;
         font-size: 2rem;
        
+      }
+    }
+    .col.contact{
+      li {
+        padding-left:38px;
+        transition: all ease-out  0.2s;
+        svg {
+          max-width:22px;
+          transition: all ease-out  0.5s;
+          path {
+            fill: #5C3327;
+          }
+        }
+        &:hover{
+            padding-left:48px;
+            svg {
+              left: 10px;
+            }
+          }
       }
     }
   }

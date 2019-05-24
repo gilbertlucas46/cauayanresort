@@ -348,6 +348,14 @@ collections:
           widget: object,
           fields:
             [
+              { label: Title, name: title,  widget: string },
+              {
+                label: Top Image,
+                name: tmage,
+                required: false,
+                hint: "Top Image visible at the bottom of the navigation",
+                widget: image,
+              },
               {
                 label: Images,
                 name: images,
