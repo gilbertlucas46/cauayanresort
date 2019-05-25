@@ -681,7 +681,7 @@ pre tt:after {
     grid-template-columns: 1fr 1fr;
     grid-gap:40px;
   }
-  @media (min-width:992px){
+  @media (min-width:768px){
     grid-template-columns: 1fr 1fr;
     grid-gap:40px;
   }
@@ -689,8 +689,8 @@ pre tt:after {
 .container {
   max-width:62rem;
   margin:auto;
-  padding: 0 30px;
-  @media (min-width: 992px) {
+  padding: 0 30px 7rem;
+  @media (min-width: 768px) {
     display:grid;
     grid-gap:20px;
   }

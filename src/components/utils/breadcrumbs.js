@@ -5,15 +5,17 @@ import Img from '../image'
 import ChevRight from '../../images/icons/chevron-right.inline.svg'
 
 const BCI = styled.div`
-position:relative;
+  position:relative;
+  margin-bottom: 7rem;
   &:before{
     content: '';
     background: rgb(0,0,0);
     background: linear-gradient(0deg,rgba(0,0,0,0.5018382352941176) 0%,rgba(255,255,255,0) 100%);
-    height: 100%;
+    height: 80%;
     width: 100%;
     position: absolute;
     z-index: 1;
+    bottom: 0;
   }
   h1 {
     position:absolute;
@@ -62,11 +64,27 @@ position:relative;
 const BreadCrumbs = ({location}) => {
   return (
     <BCI location={location}>
+      <div className="desktopView">
       <Img src={(location.pathname.includes('villas/'))
       ? 'bc-our-villas.jpg'
       : `bc-${location.pathname.replace(/villas\/|\/+/g,'')}.jpg`
       } 
-      alt="our-villas" />
+      alt="our-villas"/>
+      </div>
+      <div className="tabletView">
+        <Img src={(location.pathname.includes('villas/'))
+        ? 'bc-our-villas-tablet.jpg'
+        : `bc-${location.pathname.replace(/villas\/|\/+/g,'')}-tablet.jpg`
+        } 
+        alt="our-villas"/>
+      </div>  
+      <div className="mobileView">
+        <Img src={(location.pathname.includes('villas/'))
+        ? 'bc-our-villas-mobile.jpg'
+        : `bc-${location.pathname.replace(/villas\/|\/+/g,'')}-mobile.jpg`
+        } 
+        alt="our-villas"/>
+      </div>
       <h1>{location.pathname.replace(/villas\/+|-|\/+/g,' ')}</h1>
       <ul className="breadcrumbs">
         <li><a href="/">Home</a></li>

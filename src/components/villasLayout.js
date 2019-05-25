@@ -139,7 +139,6 @@ const VillasContainer = styled.div`
     padding-bottom: 1rem;
     border-bottom: 1px solid #D6D1CA !important;
   }
-  margin-bottom: 6rem !important;
 `;
 const Villa =  styled.div`
 .gatsby-image-wrapper {

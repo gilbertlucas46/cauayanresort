@@ -31,6 +31,7 @@ const LISTINGS_QUERY = graphql`
 
 const VillasContainer = styled.div`
   text-align:center;
+  padding-bottom: 7rem;
 `;
 
 const ViewDetails = styled.div`
@@ -58,6 +59,9 @@ const Card =  styled.div`
   padding-bottom: 3rem;
   overflow:hidden;
   transition: all .2s ease-in-out;
+  @media (max-width: 767px) {
+    margin-bottom: 2rem;
+  }
   &:hover{
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
   }
@@ -69,6 +73,9 @@ const Card =  styled.div`
       color: #5C3327;
       text-decoration:none;
       font-size:1.8rem;
+      @media (min-width: 768px) and (max-width: 991px) {
+        font-size:1.4rem;
+      }
       &:hover{
         color: #2B1109;
       }
@@ -79,8 +86,13 @@ const Card =  styled.div`
     font-weight:normal;
     font-size:1.8rem;
   }
-  .info {
-    padding: 0 2rem;
+  .info { 
+    @media (max-width: 991px) {
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 992px) {
+      padding: 0 2rem;
+    }
   }
 `;
 
