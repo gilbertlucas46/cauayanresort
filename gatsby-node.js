@@ -6,19 +6,19 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/villas/"}}) {
-        edges {
-          node {
-            frontmatter {
-              title
+      villas: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/villas/"}}) {
+          edges {
+            node {
+              frontmatter {
+                title
+              }
             }
           }
-        }
-      }
+        }      
       }   
     `).then(results => {
      
-      results.data.allMarkdownRemark.edges.forEach(({node}) => {
+      results.data.villas.edges.forEach(({node}) => {
         const slug = `${node.frontmatter.title}`
         createPage({
           path: `/villas/${slug.split(' ').join('-').toLowerCase()}`,
@@ -26,7 +26,7 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: `${slug}`,
           }
-        });
+        })
       })
       resolve();
     })

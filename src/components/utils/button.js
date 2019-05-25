@@ -12,6 +12,12 @@ const ButtonContainer = styled.button`
   border-radius: 4px;
   text-decoration:none;
   font-family: 'Conv_majalla';
+  transition: all .2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: #2B1109;
+    transform: scale(1.1)
+  }
 `;
 
 const ButtonLinkContainer = styled.span`

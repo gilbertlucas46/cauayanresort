@@ -85,6 +85,10 @@ const ContactContainer = styled.div`
         grid-area: submit;
         button {
           margin:auto;
+          padding: 0 3rem;
+          &:hover {
+            cursor: pointer;
+          }
           @media (max-width:991px) {
             width: 100%;
           }
