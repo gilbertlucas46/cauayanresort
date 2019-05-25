@@ -70,5 +70,11 @@ about:
   title: About Us
   tmage: /img/uploads/bc-about.jpg
   videobg: /img/uploads/about-video-bg.jpg
+ourvillas:
+  desc: >-
+    Cauayan has five types of villas that offer different picturesque views of
+    the island. Take in and experience the organic unity of Filipino
+    craftsmanship and nature’s own design.
+  title: Our Villas
 ---
 
