@@ -171,6 +171,7 @@ export default class VillasLayout extends Component {
       <Layout location={location} >
         {allMarkdownRemark.edges.map(nodes => {
           return (
+           <article>
             <VillasContainer className="container" key={nodes.node.frontmatter.title}>
               <Villa>
                 <VillaSlider>
@@ -196,6 +197,7 @@ export default class VillasLayout extends Component {
                 <ContactInfo/>
               </aside>
             </VillasContainer>
+           </article>
           )
         })}
       </Layout>

@@ -6,7 +6,7 @@ import ChevRight from '../../images/icons/chevron-right.inline.svg'
 
 const BCI = styled.div`
   position:relative;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
   &:before{
     content: '';
     background: rgb(0,0,0);

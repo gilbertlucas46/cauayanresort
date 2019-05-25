@@ -5,28 +5,40 @@ import Img from 'gatsby-image'
 import {ButtonLink} from '../components/utils/button'
 
 const LISTINGS_QUERY = graphql`
-    query VillasListings{
-  allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/villas/"}}, 
-    sort: {fields: [frontmatter___villasort], order: ASC}
-    ){
-    edges {
-      node {
-        frontmatter {
-          title
-          size
-          image {
-            childImageSharp {
-              fluid(maxWidth: 652) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+  query VillasListings{
+  villasList: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/villas/"}}, 
+      sort: {fields: [frontmatter___villasort], order: ASC}
+      ){
+      edges {
+        node {
+          frontmatter {
+            title
+            size
+            image {
+              childImageSharp {
+                fluid(maxWidth: 652) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
               }
             }
           }
         }
       }
     }
+    villasPage:  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/main/"}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            ourvillas {
+              desc
+            }
+          }
+        }
+      }
+    }
   }
-}
 `;
 
 const VillasContainer = styled.div`
@@ -100,14 +112,18 @@ const Card =  styled.div`
 const Listings = () => (
   <StaticQuery
     query={LISTINGS_QUERY}
-    render={({allMarkdownRemark}) => (
+    render={({villasList,villasPage}) => (
       <>
-        <section>
+        <article>
+          {villasPage.edges.map(edge => {
+            return (
+              <div className="container pageDesc">
+                <p>{edge.node.frontmatter.ourvillas.desc}</p>
+              </div>
+            )
+          })}
             <VillasContainer className="container col-2">
-            {allMarkdownRemark.edges.map(edge => {
-              const route = (link) => {
-                link.split(' ').join('-').toLowerCase()
-              }
+            {villasList.edges.map(edge => {
               return (
               <div key={edge.node.frontmatter.title}>
                   <Card>
@@ -131,7 +147,7 @@ const Listings = () => (
               )
             })}
             </VillasContainer>
-        </section>
+        </article>
       </>
     )}
   />
