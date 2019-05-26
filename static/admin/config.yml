@@ -396,3 +396,188 @@ collections:
               { label: About Description, name: desc, widget: 'markdown' },
             ],
         }
+      - {
+          label: CULINARY EXPERIENCE Page,
+          name: culinaryexperience,
+          required: false,
+          widget: object,
+          fields:
+            [
+              {
+                label: Tabs,
+                name: tabs,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Tab Name, name: tab,  widget: string },
+                    { label: Title, name: title,  widget: string },
+                    { label: About Description, name: desc, widget: 'markdown' },
+                    {
+                      label: Image Slider,
+                      name: slider,
+                      required: true,
+                      widget: list,
+                      field: {label: Image, name: image, widget: image}
+                      }
+                  ],
+              }
+            ],
+        }
+      - {
+          label: Spa Page,
+          name: spa,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title,  widget: string },
+              { label: About Description, name: desc, widget: 'markdown' },
+              {
+                label: Spa Types,
+                name: tspa,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Image, name: image, widget: image},
+                    { label: Title, name: title,  widget: string },
+                    { label: About Description, name: desc, widget: 'markdown' },
+                  ],
+              }
+            ],
+        }
+      - {
+          label: Diving Page,
+          name: diving,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title,  widget: string },
+              { label: About Description, name: desc, widget: 'markdown' },
+              {
+                label: Diving Types,
+                name: tdiving,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Image, name: image, widget: image},
+                    { label: Title, name: title,  widget: string },
+                    { label: About Description, name: desc, widget: 'markdown' },
+                  ],
+              }
+            ],
+        }
+      - {
+          label: Activities Page,
+          name: activities,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title,  widget: string },
+              { label: About Description, name: desc, widget: 'markdown' },
+              {
+                label: Diving Types,
+                name: tactivities,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Image, name: image, widget: image},
+                    { label: Title, name: title,  widget: string },
+                    { label: About Description, name: desc, widget: 'markdown' },
+                  ],
+              }
+            ],
+        }
+      - {
+          label: Getting There Page,
+          name: howtogetthere,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title,  widget: string },
+              { label: About Description, name: desc, widget: 'markdown' },
+              {
+                label: How to Get There,
+                name: gettingthere,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Image, name: image, widget: image},
+                    { label: Title, name: title,  widget: string },
+                    { label: About Description, name: desc, widget: 'markdown' },
+                  ],
+              }
+            ],
+        }
+      - {
+          label: Special Offers Page,
+          name: offers,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title,  widget: string },
+              { label: About Description, name: desc, widget: 'markdown' },
+            ],
+        }
+      - {
+          label: Terms And Conditions Page,
+          name: tandc,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title,  widget: string },
+              { label: About Description, name: desc, widget: 'markdown' },
+            ],
+        }
+      - {
+          label: FAQ Page,
+          name: faq,
+          required: false,
+          widget: object,
+          fields:
+            [
+              {
+                label: FAQ's,
+                name: faqs,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Question, name: question,  widget: string },
+                    { label: Answers, name: desc, widget: 'markdown' },
+                  ],
+              }
+            ],
+        }
+      - {
+          label: Careers Page,
+          name: careers,
+          required: false,
+          widget: object,
+          fields:
+            [
+              {
+                label: Careers,
+                name: tcareers,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Job Name, name: jname,  widget: string },
+                    { label: Location, name: loc, widget: 'string' },
+                  ],
+              }
+            ],
+        }
+
+
+        
