@@ -480,7 +480,7 @@ collections:
               { label: Title, name: title,  widget: string },
               { label: About Description, name: desc, widget: 'markdown' },
               {
-                label: Diving Types,
+                label: Activities Types,
                 name: tactivities,
                 required: false,
                 widget: list,
