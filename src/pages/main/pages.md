@@ -76,5 +76,16 @@ ourvillas:
     the island. Take in and experience the organic unity of Filipino
     craftsmanship and nature’s own design.
   title: Our Villas
+culinaryexperience:
+  tabs:
+    - desc: >-
+        Go on a journey for the senses by taking a bite of the island’s freshest
+        flavors. Every meal and refreshment in our menu is crafted by our
+        topnotch chef. Imagine the best locally-sourced ingredients prepared to
+        create a first-class feast. Truly, a culinary experience worth taking
+        home.
+      slider: []
+      tab: Restaurant
+      title: Cauayan Restaurant
 ---
 
