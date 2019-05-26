@@ -100,7 +100,7 @@ culinaryexperience:
       title: 'Private Dining '
     - desc: "Find the spot in the Pool Bar where the pool and the ocean seem one. Allow the hours to pass by as you indulge in a glass of cocktail— because pleasure without the guilt is a vacation, indeed.\n\n```\n<hr>\n```\n\n## Serving Time\r\n\n6:00 am until the last guest leaves"
       slider:
-        - /img/uploads/private-dining-image1.jpg
+        - /img/uploads/bar-image1.jpg
       tab: Pool Bar
       title: Cauayan Pool Bar
 ---
