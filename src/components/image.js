@@ -23,5 +23,5 @@ export default function Image({ src, alt }) {
   if (!image) {
     return null;
   }
-  return <Img fluid={image.node.fluid} alt={alt} />;
+  return <Img fluid={image.node.fluid} alt={alt} key={alt}/>;
 }

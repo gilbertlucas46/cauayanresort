@@ -41,6 +41,12 @@ module.exports = {
     "gatsby-remark-responsive-iframe",
     "gatsby-plugin-sass",
     {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-component"]
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
