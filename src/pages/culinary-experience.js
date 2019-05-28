@@ -53,6 +53,61 @@ const CulinaryContainer = styled.div`
 const TabContents = styled.div`
 
 `;
+const VillaSlider = styled.div`
+  @media(min-width: 1600px){
+    max-width:724px;
+  }
+  @media(min-width: 992px) and (max-width:1599px){
+    max-width:680px;
+  }
+  .slick-slider {
+    
+  }
+  .slick-next{
+    right:2rem;
+    z-index:99;
+  }
+  .slick-prev {
+    left: 2rem;
+    z-index:99;
+  }
+  .slick-prev,.slick-next{
+    width: 2rem;
+    height: 2rem;
+    &:before {
+      font-size:2rem;
+    }
+  }
+  .slick-dots {
+   bottom: -35px;
+   text-align:left;
+  }
+  .slick-active{
+    button{
+      &:before {
+        color:#BCB2B2 !important;
+      }
+    }
+  }
+  
+  .slide {
+    position:relative;
+    margin-bottom:3rem;
+    h3 {
+      position: absolute;
+      z-index:99;
+      height: 3rem;
+      background-color: #292929;
+      text-align:center;
+      width:100%;
+      bottom:-2.9rem;
+      margin:0;
+      line-height:3rem;
+      font-size:1rem;
+      letter-spacing:1px;
+    }
+  }
+`;
 
 const callback = function(key){
  
@@ -87,14 +142,16 @@ const CulinaryExperience = ({location}) => (
                   items.map(item => (
                     <TabPane tab={item.tab} key={item.title}>
                       <TabContents>
-                      <Slider {...settings} >
-                        {item.slider.map(img => {
-                          return (
-                            <Img key={img.childImageSharp.fluid.originalName} fluid={img.childImageSharp.fluid}/>
-                          )
-                        })}
-                      </Slider>
-                      {item.desc}
+                      <VillaSlider>
+                        <Slider {...settings} >
+                          {item.slider.map(img => {
+                            return (
+                              <Img key={img.childImageSharp.fluid.originalName} fluid={img.childImageSharp.fluid}/>
+                            )
+                          })}
+                        </Slider>
+                      </VillaSlider>
+                      <div dangerouslySetInnerHTML={{ __html: item.desc }}></div>
                       </TabContents>
                     </TabPane>
                   ))
