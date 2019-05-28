@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import 'rc-tabs/assets/index.css';
+  import 'rc-tabs/assets/index.css';
 
 //tabs
 import Tabs, { TabPane } from 'rc-tabs';
@@ -48,18 +48,106 @@ const CULINARY_QUERY = graphql`
 `;
 
 const CulinaryContainer = styled.div`
-
+  .rc-tabs-top {
+    border: 0 !important;
+  }
+  .rc-tabs-bar {
+    margin-bottom: 4rem;
+    border: 0 !important;
+  }
+  .rc-tabs-nav-container {
+    .rc-tabs-nav-wrap{
+      width: 100%;  
+      .rc-tabs-nav-scroll{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        @media (min-width: 768px) {
+          max-width: 80%; 
+        }
+        @media (max-width: 767px) {
+          max-width: 100%; 
+        }
+        .rc-tabs-ink-bar.rc-tabs-ink-bar-animated{
+          height: 3rem;
+          background-color: #5C3327;
+          z-index: -1;
+          display:none !important;
+        }
+      }
+      .rc-tabs-nav {
+        float: none;
+      }
+      .rc-tabs-nav > div{
+        display: flex;
+        flex: 1;
+        width: 100%;
+        .rc-tabs-tab{
+          flex-basis: 33.3333%;
+          display: flex;
+          flex-shrink: 0;
+          margin-right: 0;
+          padding: 8px 0;
+          justify-content: center;
+          background-color: #D6D1CA;
+          color: #1F1F1F;
+          padding: 0 1.4rem;
+          height: 3rem;
+          line-height: 3rem;
+          font-family: 'Conv_majalla';
+          font-size:1.2rem;
+          &:first-of-type {
+            border-radius: 3rem 0 0 3rem;
+            margin-right: 1px;
+          }
+          &:last-of-type {
+            border-radius: 0 3rem 3rem 0;
+            margin-left: 1px;
+          }
+        }
+        .rc-tabs-tab-active.rc-tabs-tab {
+          color: white;
+          background-color: #5C3327;
+        }
+      }
+    }
+  }
+`;
+const CulinaryDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  h2 {
+    color: #5C3327;
+    text-align:center;
+  }
 `;
 const TabContents = styled.div`
-
+  @media(min-width: 1200px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
 `;
-const VillaSlider = styled.div`
-  @media(min-width: 1600px){
-    max-width:724px;
+const CulinarySlider = styled.div`
+  @media(min-width: 1400px){
+    max-width:510px;
   }
-  @media(min-width: 992px) and (max-width:1599px){
-    max-width:680px;
+  @media(min-width: 1441px) {
+    max-width:100%;
+    max-width:587px
   }
+  @media(max-width: 992px) {
+    margin-bottom: 3rem
+  }
+
   .slick-slider {
     
   }
@@ -142,7 +230,7 @@ const CulinaryExperience = ({location}) => (
                   items.map(item => (
                     <TabPane tab={item.tab} key={item.title}>
                       <TabContents>
-                      <VillaSlider>
+                      <CulinarySlider>
                         <Slider {...settings} >
                           {item.slider.map(img => {
                             return (
@@ -150,8 +238,13 @@ const CulinaryExperience = ({location}) => (
                             )
                           })}
                         </Slider>
-                      </VillaSlider>
-                      <div dangerouslySetInnerHTML={{ __html: item.desc }}></div>
+                      </CulinarySlider>
+                      <CulinaryDescription>
+                          <div>
+                          <h2>{item.title}</h2>
+                          <div dangerouslySetInnerHTML={{ __html: `<p>${item.desc}</p>` }}></div>
+                          </div>
+                      </CulinaryDescription>
                       </TabContents>
                     </TabPane>
                   ))

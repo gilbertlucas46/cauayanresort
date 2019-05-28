@@ -85,8 +85,8 @@ culinaryexperience:
         create a first-class feast. Truly, a culinary experience worth taking
         home.
       slider:
-        - /img/uploads/Restaurant-image1.jpg
-        - /img/uploads/Restaurant-image2.jpg
+        - /img/uploads/restaurant-image1.jpg
+        - /img/uploads/restaurant-image2.jpg
       tab: Restaurant
       title: Cauayan Restaurant
     - desc: >-
@@ -102,32 +102,9 @@ culinaryexperience:
         Find the spot in the Pool Bar where the pool and the ocean seem one.
         Allow the hours to pass by as you indulge in a glass of cocktail—
         because pleasure without the guilt is a vacation, indeed.
-
-
-        ```
-
         <hr>
-
-        ```
-
-
-        ```
-
         <span>Serving Time</span>
-
-        ```
-
-
-        ```
-
         <p>6:00 am until the last guest leaves</p>
-
-        ```
-
-
-
-
-        ##
       slider:
         - /img/uploads/bar-image1.jpg
         - /img/uploads/bar-image2.jpg

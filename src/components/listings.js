@@ -117,7 +117,7 @@ const Listings = () => (
         <article>
           {villasPage.edges.map(edge => {
             return (
-              <div className="container pageDesc">
+              <div className="container pageDesc" key={edge.node.frontmatter.title}>
                 <p>{edge.node.frontmatter.ourvillas.desc}</p>
               </div>
             )
