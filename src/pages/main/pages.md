@@ -436,5 +436,8 @@ contactpage:
     add: 'Cauayan Island, Bacuit Bay  El Nido Palawan'
     contact: '+639195877350'
     email: reservations@cauayanresort.com
+  manila:
+    - contact: '+639088964544 Mon-Fri 9:00AM to 6:00PM'
+    - contact: +63 2 2388888 loc. 8971
 ---
 
