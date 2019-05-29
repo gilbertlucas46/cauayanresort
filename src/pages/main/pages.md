@@ -439,5 +439,12 @@ contactpage:
   manila:
     - contact: '+639088964544 Mon-Fri 9:00AM to 6:00PM'
     - contact: +63 2 2388888 loc. 8971
+  social:
+    facebook: >-
+      https://www.facebook.com/cauayanislandresortelnido/?eid=ARAxyR0Ix2z5909IWtmYlfHkf-fIu2Q1MgNM9JeHR7H2V46TvC3irwjn5sTxo5oZIqzkz_9DQV9BTF7-&timeline_context_item_type=intro_card_work&timeline_context_item_source=1551844710&fref=tag
+    instagram: 'https://www.instagram.com/cauayanislandresort/?hl=en'
+    linkedin: 'https://www.linkedin.com/company/cauayanislandresort/about/'
+    tripadvisor: >-
+      https://www.tripadvisor.com.ph/Hotel_Review-g294256-d8725961-Reviews-Cauayan_Island_Resort-El_Nido_Palawan_Island_Palawan_Province_Mimaropa.html
 ---
 
