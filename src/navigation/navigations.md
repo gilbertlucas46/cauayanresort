@@ -57,15 +57,15 @@ footernav:
       - title: Careers
         url: careers
 social:
-  - icons: /img/uploads/google.inline.svg
-    name: google
   - icons: /img/uploads/instagram.inline.svg
-    name: instagram
+    name: 'https://www.instagram.com/cauayanislandresort/?hl=en'
   - icons: /img/uploads/facebook.inline.svg
-    name: facebook
+    name: >-
+      https://www.facebook.com/cauayanislandresortelnido/?eid=ARAxyR0Ix2z5909IWtmYlfHkf-fIu2Q1MgNM9JeHR7H2V46TvC3irwjn5sTxo5oZIqzkz_9DQV9BTF7-&timeline_context_item_type=intro_card_work&timeline_context_item_source=1551844710&fref=tag
   - icons: /img/uploads/linkedin.inline.svg
-    name: linkedin
+    name: 'https://www.linkedin.com/company/cauayanislandresort/about/'
   - icons: /img/uploads/tripadvisory.inline.svg
-    name: tripadvisory
+    name: >-
+      https://www.tripadvisor.com.ph/Hotel_Review-g294256-d8725961-Reviews-Cauayan_Island_Resort-El_Nido_Palawan_Island_Palawan_Province_Mimaropa.html
 ---
 
