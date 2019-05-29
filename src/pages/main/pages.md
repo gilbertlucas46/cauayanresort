@@ -101,10 +101,8 @@ culinaryexperience:
     - desc: >-
         Find the spot in the Pool Bar where the pool and the ocean seem one.
         Allow the hours to pass by as you indulge in a glass of cocktail—
-        because pleasure without the guilt is a vacation, indeed.
-        <hr>
-        <span>Serving Time</span>
-        <p>6:00 am until the last guest leaves</p>
+        because pleasure without the guilt is a vacation, indeed. <hr>
+        <span>Serving Time</span> <p>6:00 am until the last guest leaves</p>
       slider:
         - /img/uploads/bar-image1.jpg
         - /img/uploads/bar-image2.jpg
@@ -433,5 +431,14 @@ careers:
       loc: 'Makati, Manila'
     - jname: Hotel Reservations & Sales
       loc: Cauayan Island
+contactpage:
+  cauayan:
+    add: 'Cauayan Island, Bacuit Bay  El Nido Palawan'
+    contact: '+639195877350'
+    email: reservations@cauayanresort.com
+  manila:
+    add: '+639088964544 Mon-Fri 9:00AM to 6:00PM'
+    contact: ' '
+    email: +63 2 2388888 loc. 8971
 ---
 
