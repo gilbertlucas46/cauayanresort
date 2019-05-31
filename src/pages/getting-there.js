@@ -60,6 +60,7 @@ const GettingThereContent = styled.div`
     strong {
       margin-top:1.5rem;
       color: #5C3327;
+      display:block;
       &:first-of-type{
         margin-top:0;
       }

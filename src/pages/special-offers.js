@@ -85,13 +85,7 @@ const SpecialOffers = ({location}) => (
                 <SpecialOffersContent>
                   {items.gettingthere.map(direction => (
                     <>
-                      <div className="direction">
-                        <Img key={direction.image.childImageSharp.fluid.originalName} fluid={direction.image.childImageSharp.fluid}/>
-                        <h3>{direction.title}</h3>
-                        <div className="desc">
-                          <p dangerouslySetInnerHTML = {{ __html: direction.desc }}/>
-                        </div>
-                      </div>
+                      
                     </>
                   ))}
                 </SpecialOffersContent>

@@ -71,8 +71,8 @@ const BreadCrumbs = ({location}) => {
     <BCI location={location}>
       <div className="desktopView">
       <Img src={(location.pathname.includes('villas/'))
-      ? 'bc-our-villas.jpg'
-      : `bc-${location.pathname.replace(/villas\/|\/+/g,'')}.jpg`
+      ? 'bc-our-villas-desktop.jpg'
+      : `bc-${location.pathname.replace(/villas\/|\/+/g,'')}-desktop.jpg`
       } 
       alt="our-villas"/>
       </div>
