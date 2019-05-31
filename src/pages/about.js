@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { StaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image'
+import Video from '../components/video'
 
 import Layout from "../components/layout"
 
@@ -22,7 +23,7 @@ const About_QUERY = graphql`
                 image {
                   childImageSharp{
                     fluid(maxWidth:320){
-                      src
+                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
                     }
                   }
                 }
@@ -30,7 +31,7 @@ const About_QUERY = graphql`
               videobg {
                 childImageSharp{
                   fluid(maxWidth: 600){
-                    src
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
@@ -49,28 +50,67 @@ const AboutContainer = styled.div`
   
 `;
 const AboutContent = styled.div`
-  @media(min-width: 768px){
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-  }
-`;
-const AboutDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  h3 {
-    color: #5C3327;
-    text-align:center;
-    @media (max-width:767px) {
-      margin-top: 2rem;
+  section {
+    margin-bottom: 4rem;
+    @media(min-width: 768px){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+    }
+    h3 {
+      color: #5C3327;
+      text-align:center;
+      font-size:1.6rem;
+      @media (max-width:767px) {
+        margin-top: 2rem;
+      }
     }
   }
-  p {
-    margin-bottom:0;
+  .aboutCauayan{
+    .images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+    .desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  .philosophy {
+    .images {
+      .videoContainer{
+        position:relative;
+      }
+      .desktopView, .mobileView, .tabletView {
+        display:none;
+      }
+      .video__VideoContainer-bgjgsQ{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100px;
+        width: 100px;
+      }
+      .caption > div{
+        height: auto;
+        position: relative;
+        padding: 0;
+      }
+      .caption {
+        position: relative;
+        h3,h4,.desc{
+          display:none;
+        }
+      }
+    }
   }
 `;
 
@@ -88,9 +128,23 @@ const About = ({location}) => (
             <AboutContent>
               <section className="aboutCauayan">
                 <div className="images">
+                  {items.images.map(img => (
+                    <Img key={img.image.childImageSharp.fluid.originalName} fluid={img.image.childImageSharp.fluid}/>
+                  ))}
                 </div>
                 <div className="desc">
-                <div className="desc" dangerouslySetInnerHTML = {{ __html: items.desc }} />
+                  <div dangerouslySetInnerHTML = {{ __html: items.desc }} />
+                </div> 
+              </section>
+              <section className="philosophy">
+                <div className="desc">
+                  <div dangerouslySetInnerHTML = {{ __html: items.phcontent }} />
+                </div> 
+                <div className="images">
+                  <div className="videoContainer">
+                    <Img key={items.videobg.childImageSharp.fluid.originalName} fluid={items.videobg.childImageSharp.fluid}/>
+                    <Video/>
+                  </div>
                 </div>
               </section>
             </AboutContent>
@@ -104,8 +158,3 @@ const About = ({location}) => (
 )
 
 export default About
-// <Img key={activities.image.childImageSharp.fluid.originalName} fluid={activities.image.childImageSharp.fluid}/>
-// <AboutDescription>
-//   <h3>{activities.title}</h3>
-//   <p>{activities.desc}</p>
-// </AboutDescription>
