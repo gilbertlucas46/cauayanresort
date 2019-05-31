@@ -1,10 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-
 import { StaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image'
-import Video from '../components/video'
-
 import Layout from "../components/layout"
 
 
@@ -15,26 +11,15 @@ const SpecialOffers_QUERY = graphql`
         node {
           frontmatter {
             title
-            howtogetthere{
+            offers {
+              title
               desc
-              gettingthere{
-                title
-                desc
-                image{
-                  childImageSharp{
-                    fluid(maxWidth:600){
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
-                  }
-                }
-              }
             }
           }
         }
       }
     }
   }
-
 `;
 
 const SpecialOffersContainer = styled.div`
@@ -45,13 +30,10 @@ const SpecialOffersContainer = styled.div`
   }
 `;
 const SpecialOffersContent = styled.div`
-  @media(min-width: 768px){
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
+  p {
+    text-align:center;
   }
-  .direction{
-    h3 {
+  h3 {
       color: #5C3327;
       text-align:center;
       font-size: 2rem;
@@ -64,7 +46,6 @@ const SpecialOffersContent = styled.div`
         margin-top:0;
       }
     }
-  }
 `;
 
 
@@ -76,18 +57,13 @@ const SpecialOffers = ({location}) => (
       <article>
         <SpecialOffersContainer className="container">
           {allMarkdownRemark.edges.map(edge => {
-            const items = edge.node.frontmatter.howtogetthere;
+            const items = edge.node.frontmatter.offers;
             return (
               <>
-              <div className="intro">
-               <p dangerouslySetInnerHTML = {{ __html: items.desc }}/>
-              </div>
+              
                 <SpecialOffersContent>
-                  {items.gettingthere.map(direction => (
-                    <>
-                      
-                    </>
-                  ))}
+                  <h3>{items.title}</h3>
+                  <p dangerouslySetInnerHTML = {{ __html: items.desc }}/>
                 </SpecialOffersContent>
               </>
             )

@@ -1,12 +1,8 @@
 import React from "react"
 import styled from 'styled-components'
-
 import { StaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image'
-import Video from '../components/video'
 
 import Layout from "../components/layout"
-
 
 const Careers_QUERY = graphql`
   query CareersPage{

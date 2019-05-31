@@ -2,8 +2,9 @@ import React from "react"
 import styled from 'styled-components'
 
 import { StaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image'
-import Video from '../components/video'
+
+import Collapse from 'rc-collapse'
+import 'rc-collapse/assets/index.css'
 
 import Layout from "../components/layout"
 
@@ -15,18 +16,10 @@ const FAQ_QUERY = graphql`
         node {
           frontmatter {
             title
-            howtogetthere{
-              desc
-              gettingthere{
-                title
+            faq {
+              faqs{
                 desc
-                image{
-                  childImageSharp{
-                    fluid(maxWidth:600){
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
-                  }
-                }
+                question
               }
             }
           }
@@ -34,7 +27,6 @@ const FAQ_QUERY = graphql`
       }
     }
   }
-
 `;
 
 const FAQContainer = styled.div`
@@ -45,28 +37,27 @@ const FAQContainer = styled.div`
   }
 `;
 const FAQContent = styled.div`
-  @media(min-width: 768px){
+  .rc-collapse{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-  }
-  .direction{
-    h3 {
-      color: #5C3327;
-      text-align:center;
-      font-size: 2rem;
-      margin-top: 2rem;
+    grid-gap: 20px;
+    border: 0;
+    .arrow{
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid #666;
     }
-    strong {
-      margin-top:1.5rem;
-      color: #5C3327;
-      &:first-of-type{
-        margin-top:0;
+    .rc-collapse-item-active{
+      .arrow{
+        top: 5px;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid #666;
       }
     }
   }
 `;
 
+const Panel = Collapse.Panel;
 
 const FAQ = ({location}) => (
   <StaticQuery
@@ -76,18 +67,15 @@ const FAQ = ({location}) => (
       <article>
         <FAQContainer className="container">
           {allMarkdownRemark.edges.map(edge => {
-            const items = edge.node.frontmatter.howtogetthere;
+            const items = edge.node.frontmatter.faq;
             return (
               <>
-              <div className="intro">
-               <p dangerouslySetInnerHTML = {{ __html: items.desc }}/>
-              </div>
                 <FAQContent>
-                  {items.gettingthere.map(direction => (
-                    <>
-                     
-                    </>
-                  ))}
+                  <Collapse accordion={true}>
+                    {items.faqs.map(faq => (
+                      <Panel header={faq.question} headerClass="tabHeader">{faq.desc}</Panel>
+                    ))}
+                  </Collapse>
                 </FAQContent>
               </>
             )
