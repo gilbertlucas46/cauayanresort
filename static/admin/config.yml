@@ -628,6 +628,16 @@ collections:
             },
           ],
         }
+      - {
+          label: Special Offers,
+          name: specialoffers,
+          required: false,
+          widget: object,
+          fields:
+            [
+              { label: Special offers, name: desc, widget: 'markdown' },
+            ],
+        }
 
 
         

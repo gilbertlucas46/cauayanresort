@@ -8,8 +8,8 @@ import Video from '../components/video'
 import Layout from "../components/layout"
 
 
-const GettingThere_QUERY = graphql`
-  query GettingTherePage{
+const SpecialOffers_QUERY = graphql`
+  query SpecialOffersPage{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/main/"}}) {
       edges {
         node {
@@ -37,14 +37,14 @@ const GettingThere_QUERY = graphql`
 
 `;
 
-const GettingThereContainer = styled.div`
+const SpecialOffersContainer = styled.div`
   .intro {
     p{
       text-align:center;
     }
   }
 `;
-const GettingThereContent = styled.div`
+const SpecialOffersContent = styled.div`
   @media(min-width: 768px){
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,13 +68,13 @@ const GettingThereContent = styled.div`
 `;
 
 
-const GettingThere = ({location}) => (
+const SpecialOffers = ({location}) => (
   <StaticQuery
-  query={GettingThere_QUERY}
+  query={SpecialOffers_QUERY}
   render={({allMarkdownRemark}) => (
     <Layout location={location}>
       <article>
-        <GettingThereContainer className="container">
+        <SpecialOffersContainer className="container">
           {allMarkdownRemark.edges.map(edge => {
             const items = edge.node.frontmatter.howtogetthere;
             return (
@@ -82,7 +82,7 @@ const GettingThere = ({location}) => (
               <div className="intro">
                <p dangerouslySetInnerHTML = {{ __html: items.desc }}/>
               </div>
-                <GettingThereContent>
+                <SpecialOffersContent>
                   {items.gettingthere.map(direction => (
                     <>
                       <div className="direction">
@@ -94,15 +94,15 @@ const GettingThere = ({location}) => (
                       </div>
                     </>
                   ))}
-                </GettingThereContent>
+                </SpecialOffersContent>
               </>
             )
           })} 
-        </GettingThereContainer>
+        </SpecialOffersContainer>
       </article>
     </Layout>
   )}
   />
 )
 
-export default GettingThere
+export default SpecialOffers
