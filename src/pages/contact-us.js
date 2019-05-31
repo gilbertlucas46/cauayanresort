@@ -1,63 +1,177 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+import Layout from "../components/layout"
 import {Button} from '../components/utils/button'
 
-import Layout from "../components/layout"
+//icons
+import Pin from '../images/icons/pin.inline.svg'
+import Phone from '../images/icons/phone.inline.svg'
+import Email from '../images/icons/mail.inline.svg'
+//Social
+import Facebook from '../images/icons/social/facebook.inline.svg'
+import Instagram from '../images/icons/social/instagram.inline.svg'
+import Linkedin from '../images/icons/social/linkedin.inline.svg'
+import Tripadvisory from '../images/icons/social/tripadvisory.inline.svg'
 
-const TopContactWrapper = styled.div`
+const ContactUsContainer = styled.div`
+  
+`;
+const ContactUsContent = styled.div`
   @media(min-width: 768px){
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
   }
+  form {
+    button {
+      width:100%;
+      margin-top: 1rem;
+    }
+    label {
+      margin-bottom: 1rem;
+      display: block;
+      color: #5C3327;
+      font-family: 'Conv_majalla';
+      font-size: 1.8rem;
+    }
+    input {
+      height: 3rem;
+      margin-bottom: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      border-radius: 4px;
+      border-style: none;
+      border: 1px solid #D6D1CA;
+      text-indent: 1rem;
+    }
+    textarea {
+      padding: 0.8rem 0;
+      max-height: 12.4rem;
+    }
+  }
+  h4 {
+    font-size: 1.6rem;
+    color: #5C3327;
+    @media (max-width:767px) {
+      text-align:center;
+    }
+  }
+  .ContactUs{
+    ul {
+      &:first-of-type {
+        border-bottom: 2px solid #D6D1CA;
+        margin-bottom: 2rem;
+        padding-bottom: 1.6rem;
+      }
+      li {
+        @media (max-width:767px) {
+          line-height: 1.6rem;
+        }
+      }
+    }
+    .Social{
+      margin-top: 2rem;
+      li {
+        padding: 0;
+        margin-left: 0;
+        display: inline-block;
+        margin-right: 1rem;
+        
+        svg {
+          min-width: 28px;
+          min-height: 28px;
+          position: relative;
+          left: 0;
+          path {
+            fill: #5C3327;
+          }
+        }
+      }
+    }
+  }
   ul {
     margin:0;
+    padding:0;
     li {
       list-style-type:none;
       position:relative;
       padding-left: 15px;
-      color: #4B858E;
-      margin: 3px 0;
-      margin-left: 20px;
+      color: #1F1F1F;
+      margin-bottom: 12px;
+      margin-left: 15px;
       font-family: 'Conv_majalla';
+      font-size:1.6rem;
       svg {
         max-height: 17px;
         display:inline;
         position:absolute;
-        left:-10px;
+        left: -10px;
         width: 17px;
         top:0;
         bottom:0;
         margin:auto;
+        path{
+          fill: #5C3327;
+        }
       }
     }
   }
 `;
-
-const ContactUs = ({location}) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query ContactUsQuery {
-          markdownRemark{
-            frontmatter {
-              title
-              topcontact {
-                add
-                email
-                phone {
-                  num
+const CONTACT_QUERY = graphql`
+  query ContactPage {
+        contactinfo: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/main/"}}) {
+            edges {
+              node {
+                frontmatter {
+                  title
+                  contactpage{
+                    cauayan{
+                      add
+                      contact
+                      email
+                    }
+                    manila {
+                      contact
+                    }
+                    social {
+                      facebook
+                      instagram
+                      linkedin
+                      tripadvisor
+                    }
+                    map{
+                      childImageSharp{
+                        fluid(maxWidth: 600){
+                          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         }
-      `}
-      render={data => (
-        <Layout location={location}>
-          <TopContactWrapper>
-            <div className="desc container">
+`;
+
+
+const ContactUs = ({location}) => (
+  <StaticQuery
+  query={CONTACT_QUERY}
+  render={({contactinfo}) => (
+    <Layout location={location}>
+      <article>
+        <ContactUsContainer className="container">
+          {contactinfo.edges.map(edge => {
+            const manila = edge.node.frontmatter.contactpage.manila;
+            const cauayan = edge.node.frontmatter.contactpage.cauayan;
+            const social = edge.node.frontmatter.contactpage.social;
+            const map = edge.node.frontmatter.contactpage.map;
+            return (
+              <ContactUsContent>
                 <form name="contactpage" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/thankyou">
                   <div className="formCentered">
                     <div className="innerCont">
@@ -66,18 +180,18 @@ const ContactUs = ({location}) => {
                       <div className="left">
                         <input type="hidden" name="form-name" value="contactpage" />
                         <div className="form-group">
-                          <input type="text" placeholder="Name" id="name" name="name" />
+                          <label htmlFor="name">Name</label>
+                          <input type="text" id="name" name="name" />
                         </div>
                         <div className="form-group">
+                        <label htmlFor="email">Email</label>
                           <input type="email" placeholder="Email" id="email" name="email" />
-                        </div>
-                        <div className="form-group">
-                          <input type="text" placeholder="Phone" id="phone" name="phone" />
                         </div>
                       </div>
                       <div className="right">
                         <div className="form-group">
-                          <textarea name="details" placeholder="Message" id="message" rows="8"></textarea>
+                        <label htmlFor="message">Message</label>
+                          <textarea name="details" id="message" rows="8"></textarea>
                         </div>
                       </div>
                       <div className="form-group sendButton">
@@ -86,39 +200,44 @@ const ContactUs = ({location}) => {
                     </div>
                   </div>
                 </form>
-              </div>
-            <div className="ContactUs">
-              <ul>
-                <li>
-                  <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17"><path d="M12.5 5.5c0 1-.4 2.4-1.2 4.1s-1.5 2.9-2 3.6L8 15l-1.1-1.6c-.8-1.1-1.5-2.4-2.2-4-.8-1.5-1.2-2.9-1.2-3.9 0-1.2.4-2.3 1.3-3.2S6.8 1 8 1s2.3.4 3.2 1.3 1.3 1.9 1.3 3.2zm-3 0c0-.4-.1-.8-.4-1S8.4 4 8 4s-.8.2-1 .5-.4.6-.4 1 .1.8.4 1 .6.5 1 .5.8-.1 1-.4.5-.7.5-1.1z" fill="#4b858e" /></svg>  
-                  </span>
-                  {data.markdownRemark.frontmatter.topcontact.add}
-                </li>
-                  {data.markdownRemark.frontmatter.topcontact.phone.map(phone => (
-                    <li >
-                    <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17"><path d="M13.768 10.492c.1.1.2.3.2.5v2.3c0 .2-.1.3-.2.5-.1.1-.3.2-.5.2-3.1 0-5.8-1.1-8-3.3s-3.3-4.9-3.3-8c0-.2.1-.3.2-.5.1-.1.3-.2.5-.2h2.3c.2 0 .3.1.5.2.1.1.2.3.2.5 0 .8.1 1.6.4 2.4.1.3 0 .5-.2.7l-1.4 1.4a10.38 10.38 0 0 0 4.4 4.4l1.5-1.5c.1-.2.4-.2.7-.2.8.2 1.6.4 2.4.4 0 .1.2.1.3.2z" fill="#4b858e" /></svg>
-                    </span>
-                      {phone.num[1]}
+                <div className="ContactUs">
+                  <ul>
+                    <li><Pin/>{cauayan.add}</li>
+                    <li><Phone/>{cauayan.contact}</li>
+                    <li><Email/>{cauayan.email}</li>
+                  </ul>
+                  <ul>
+                    <h4>manila office</h4>
+                    {manila.map(item => (
+                      <li>
+                        <Phone/>{item.contact}
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="Social">
+                    <li>
+                      <a href={social.facebook}><Facebook/></a>
                     </li>
-                  ))}
-                  <li>
-                    <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19"><path d="M2.2 13.5V5l4.6 3.5-2.4 2.7.1.1 2.8-2.5L9 10.1l1.7-1.3 2.8 2.5.1-.1-2.4-2.7L15.8 5v8.5H2.2zM9 9.4L2.5 4.5h12.9L9 9.4z" fill="#4b858e" /></svg>
-                    </span>
-                    {data.markdownRemark.frontmatter.topcontact.email}
-                  </li>
-                  
-              </ul>
-            </div>
-          </TopContactWrapper>
-          </Layout>
-      )}
-    />
-  )
-}
-
-
+                    <li>
+                      <a href={social.instagram}><Instagram/></a>
+                    </li>
+                    <li>
+                      <a href={social.linkedin}><Linkedin/></a>
+                    </li>
+                    <li>
+                      <a href={social.tripadvisor}><Tripadvisory/></a>
+                    </li>
+                  </ul>
+                  <Img key={map.childImageSharp.fluid.originalName} fluid={map.childImageSharp.fluid}/>
+                </div>
+              </ContactUsContent>
+            )
+          })}
+        </ContactUsContainer>
+      </article>
+    </Layout>
+  )}
+  />
+)
 
 export default ContactUs
