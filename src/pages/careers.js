@@ -32,7 +32,7 @@ const Careers_QUERY = graphql`
   }
 
 `;
-
+ 
 const CareersContainer = styled.div`
   .intro {
     p{

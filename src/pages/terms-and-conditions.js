@@ -31,6 +31,7 @@ const TermsContainer = styled.div`
     }
   }
 `;
+
 const TermsContent = styled.div`
   p {
     text-align:center;

@@ -21,7 +21,7 @@ const GalleryContainer = styled.div`
    
     margin-bottom: 1rem;
   }
-  
+   
   .thumbNav {
     .slick-slide > div{
       margin: 0 10px;
