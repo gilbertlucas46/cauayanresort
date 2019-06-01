@@ -578,6 +578,56 @@ collections:
               }
             ],
         }
+      - {
+          label: Contact Page,
+          name: contactpage,
+          required: false,
+          widget: object,
+          fields:
+            [
+              {
+                label: Cauayan,
+                name: cauayan,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { label: Address, name: add,  widget: string },
+                    { label: Contact, name: contact, widget: 'string' },
+                    { label: Email, name: email, widget: 'string' },
+                  ],
+              },
+              {
+                label: Manila,
+                name: manila,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Contact, name: contact,  widget: string },
+                  ],
+              },
+              {
+              label: Social,
+              name: social,
+              required: false,
+              widget: object,
+              fields:
+                [
+                  { label: Instagram, name: instagram,  widget: string },
+                  { label: Facebook, name: facebook,  widget: string },
+                  { label: Linkedin, name: linkedin,  widget: string },
+                  { label: Tripadvisor, name: tripadvisor,  widget: string },
+                ],
+            },
+            {
+              label: Cauayan Map,
+              name: map,
+              required: false,
+              widget: image,
+            },
+          ],
+        }
 
 
         

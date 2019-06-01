@@ -56,16 +56,13 @@ home:
     title: Welcome To Cauayan Resort
     video: 'https://www.youtube.com/embed/RAOd6cSQsr8'
 about:
-  desc: >-
-    ### Our Private Island Resort
-
-    Cauayan Island Resort is a luxury resort that embodies the pristine beauty
-    of its natural surroundings and first class personalized services. Escape to
-    a paradise of tranquility and haven of comfort. Indulge yourself in a
-    perfect serene lifestyle vacation.
+  desc: <h3>Our Private Island Resort</h3><p>Cauayan Island Resort is a luxury resort that embodies the pristine beauty of its natural surroundings and first class personalized services. Escape to a paradise of tranquility and haven of comfort. Indulge yourself in a perfect serene lifestyle vacation.</p>
   images:
     - image: /img/uploads/about-image1.jpg
-  phcontent: "### Our Philosophy\nWe remember the first time we laid our eyes on this island. Since then, we made it our lifegoal to translate the amazement and humility of witnessing such beauty in the experiences we have to offer—from world-class customer service to redefined meaning of luxury accommodation. Here at Cauayan Island Resort, we wish to bring you closer to El Nido, and perhaps, help you rekindle your passion for life, if not, ignite it further. \r\rThey say people leave a piece of themselves to every place they travel to. With us, we promise to do otherwise: you’ll take every bit of experience here at Cauayan with you wherever you go. It’s the kind of connection we wish to bring. It is the connection we, ourselves, have with the island."
+    - image: /img/uploads/about-image2.jpg
+    - image: /img/uploads/about-image3.jpg
+    - image: /img/uploads/about-image4.jpg
+  phcontent:  <h3> Our Philosophy </h3> <p>We remember the first time we laid our eyes on this island. Since then, we made it our lifegoal to translate the amazement and humility of witnessing such beauty in the experiences we have to offer—from world-class customer service to redefined meaning of luxury accommodation. Here at Cauayan Island Resort, we wish to bring you closer to El Nido, and perhaps, help you rekindle your passion for life, if not, ignite it further. They say people leave a piece of themselves to every place they travel to. With us, we promise to do otherwise you’ll take every bit of experience here at Cauayan with you wherever you go. It’s the kind of connection we wish to bring. It is the connection we, ourselves, have with the island. </p>
   source: test
   title: About Us
   tmage: /img/uploads/bc-about.jpg
@@ -241,22 +238,20 @@ activities:
 howtogetthere:
   desc: >-
     From Lio Airport (El Nido):  Our resort will provide a complimentary van and
-    speedboat to get to the island. 
-
+    speedboat to get to the island. </br>
 
     From Puerto Princesa City: Both shared and private vans are available for
     the 5 to 6- hour travel to the destined pick-up point. Our pick-up point for
     the shared transfer is at El Nido Van Terminal while our pick-up point for
-    the private van is at El Nido Port.
-
+    the private van is at El Nido Port.</br>
 
     From Busuanga or Coron: A fast-craft ferry off to El Nido Port is available.
     The boat transfer from El Nido Port to the resort will be provided by us.
   gettingthere:
-    - desc: "**Start Time:** 8:00 AM\rOrigin: Cauayan Island Resort\rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n**Destination:** (60 mins.)\rSmall Lagoon -enter the tranquil green waters surrounded by\rorchid-lined limestone walls through a small hole. Kayaking is recommended in taking the course of Small Lagoon. Kayaks are available for rent at the destination. \rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n**Destination:** (30 mins.)\rBig Lagoon - well known as breeding ground of different fishes and crustaceans. Main attraction is the rock formation, mangroves and marine life such as territorial fishes, sea urchin and etc.\rTravel Time: Approximately 15 mins.\n\n\n\n\x03\x03Lunch\rAbdeens Reef or Shimizu Island (depending on Tide and Sea\rCondition)\x03\x03\n\n\n\n**Destination:** (60 mins.)\rAbdeens Reef - known to have a variety of fishes, hard and soft corals are abundant in the site, while damsel, fusilier, angel and other tropical fishes roam around. Highly suggested for snorkeling.\rTravel Time: Approximately 40-60 mins\x03\x03\n\n\n\n**Destination:** (60 mins.)\rCadlao Lagoon - the highest peak of El Nido towers up to 640 meters above the sea level features a brackish water lagoon is surrounded by breath-taking green mountain and limestone rock formation. One of the nearest outside destination to Cauayan Island Resort. A perfect place for swimming and snorkeling.\x03\x03\n\n\n\n**End Time:** 4:00 PM\rEnd Point: Cauayan Island Resort"
+    - desc: "<strong>Start Time:</strong> 8:00 AM\rOrigin: Cauayan Island Resort\rTravel Time: Approximately 60 mins.\x03\x03\n\n\n<strong>Destination:</strong> (60 mins.)\rSmall Lagoon -enter the tranquil green waters surrounded by\rorchid-lined limestone walls through a small hole. Kayaking is recommended in taking the course of Small Lagoon. Kayaks are available for rent at the destination. \rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n\n<strong>Destination:</strong> (30 mins.)\rBig Lagoon - well known as breeding ground of different fishes and crustaceans. Main attraction is the rock formation, mangroves and marine life such as territorial fishes, sea urchin and etc.\rTravel Time: Approximately 15 mins.\n\n\n\nLunch\rAbdeens Reef or Shimizu Island (depending on Tide and Sea\rCondition)\x03\x03\n\n\n\n\n<strong>Destination:</strong> (60 mins.)\rAbdeens Reef - known to have a variety of fishes, hard and soft corals are abundant in the site, while damsel, fusilier, angel and other tropical fishes roam around. Highly suggested for snorkeling.\rTravel Time: Approximately 40-60 mins\x03\x03\n\n\n\n\n<strong>Destination:</strong> (60 mins.)\rCadlao Lagoon - the highest peak of El Nido towers up to 640 meters above the sea level features a brackish water lagoon is surrounded by breath-taking green mountain and limestone rock formation. One of the nearest outside destination to Cauayan Island Resort. A perfect place for swimming and snorkeling.\x03\x03\n\n\n\n<strong>End Time:</strong> 4:00 PM\r<strong>End Point:</strong> Cauayan Island Resort"
       image: /img/uploads/via-plane.jpg
       title: Via plane
-    - desc: "**Start Time:** 8:00 AM\rOrigin: Cauayan Island Resort\rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n**Destination:** (60 mins.)\rSmall Lagoon -enter the tranquil green waters surrounded by\rorchid-lined limestone walls through a small hole. Kayaking is recommended in taking the course of Small Lagoon. Kayaks are available for rent at the destination. \rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n**Destination:** (30 mins.)\rBig Lagoon - well known as breeding ground of different fishes and crustaceans. Main attraction is the rock formation, mangroves and marine life such as territorial fishes, sea urchin and etc.\rTravel Time: Approximately 15 mins.\n\n\n\n\x03\x03Lunch\rAbdeens Reef or Shimizu Island (depending on Tide and Sea\rCondition)\x03\x03\n\n\n\n**Destination:** (60 mins.)\rAbdeens Reef - known to have a variety of fishes, hard and soft corals are abundant in the site, while damsel, fusilier, angel and other tropical fishes roam around. Highly suggested for snorkeling.\rTravel Time: Approximately 40-60 mins\x03\x03\n\n\n\n**Destination:** (60 mins.)\rCadlao Lagoon - the highest peak of El Nido towers up to 640 meters above the sea level features a brackish water lagoon is surrounded by breath-taking green mountain and limestone rock formation. One of the nearest outside destination to Cauayan Island Resort. A perfect place for swimming and snorkeling.\x03\x03\n\nSpecial Offers\n\n**End Time:** 4:00 PM\rEnd Point: Cauayan Island Resort"
+    - desc: "<strong>Start Time:</strong> 8:00 AM\rOrigin: Cauayan Island Resort\rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n<strong>Destination:</strong> (60 mins.)\rSmall Lagoon -enter the tranquil green waters surrounded by\rorchid-lined limestone walls through a small hole. Kayaking is recommended in taking the course of Small Lagoon. Kayaks are available for rent at the destination. \rTravel Time: Approximately 60 mins.\x03\x03\n\n\n\n<strong>Destination:</strong> (30 mins.)\rBig Lagoon - well known as breeding ground of different fishes and crustaceans. Main attraction is the rock formation, mangroves and marine life such as territorial fishes, sea urchin and etc.\rTravel Time: Approximately 15 mins.\n\n\n\nLunch\rAbdeens Reef or Shimizu Island (depending on Tide and Sea\rCondition)\x03\x03\n\n\n\n<strong>Destination:</strong> (60 mins.)\rAbdeens Reef - known to have a variety of fishes, hard and soft corals are abundant in the site, while damsel, fusilier, angel and other tropical fishes roam around. Highly suggested for snorkeling.\rTravel Time: Approximately 40-60 mins\x03\x03\n\n\n\n<strong>Destination:</strong> (60 mins.)\rCadlao Lagoon - the highest peak of El Nido towers up to 640 meters above the sea level features a brackish water lagoon is surrounded by breath-taking green mountain and limestone rock formation. One of the nearest outside destination to Cauayan Island Resort. A perfect place for swimming and snorkeling.\x03\x03\n\nSpecial Offers\n\n<strong>Destination:</strong> 4:00 PM\r<strong>End Point:</strong> Cauayan Island Resort"
       image: /img/uploads/via-boat.jpg
       title: 'Via boat '
   title: How to get there
@@ -437,8 +432,15 @@ contactpage:
     contact: '+639195877350'
     email: reservations@cauayanresort.com
   manila:
-    add: '+639088964544 Mon-Fri 9:00AM to 6:00PM'
-    contact: ' '
-    email: +63 2 2388888 loc. 8971
+    - contact: '+639088964544 Mon-Fri 9:00AM to 6:00PM'
+    - contact: +63 2 2388888 loc. 8971
+  map: /img/uploads/map.jpg
+  social:
+    facebook: >-
+      https://www.facebook.com/cauayanislandresortelnido/?eid=ARAxyR0Ix2z5909IWtmYlfHkf-fIu2Q1MgNM9JeHR7H2V46TvC3irwjn5sTxo5oZIqzkz_9DQV9BTF7-&timeline_context_item_type=intro_card_work&timeline_context_item_source=1551844710&fref=tag
+    instagram: 'https://www.instagram.com/cauayanislandresort/?hl=en'
+    linkedin: 'https://www.linkedin.com/company/cauayanislandresort/about/'
+    tripadvisor: >-
+      https://www.tripadvisor.com.ph/Hotel_Review-g294256-d8725961-Reviews-Cauayan_Island_Resort-El_Nido_Palawan_Island_Palawan_Province_Mimaropa.html
 ---
 
