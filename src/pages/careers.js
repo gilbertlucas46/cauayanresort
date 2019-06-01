@@ -81,7 +81,7 @@ const Careers = ({location}) => (
                 <CareersContent>
                   {items.gettingthere.map(direction => (
                     <>
-                     
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt explicabo quo facilis praesentium rem sed, nobis natus odio nisi, hic mollitia temporibus. Distinctio aliquam magnam quis quae accusantium minus suscipit!
                     </>
                   ))}
                 </CareersContent>

@@ -176,9 +176,9 @@ export default class VillasLayout extends Component {
               <Villa>
                 <VillaSlider>
                 <Slider {...settings} >
-                  {nodes.node.frontmatter.slider.map(img => {
+                  {nodes.node.frontmatter.slider.image.map(img => {
                     return (
-                      <Img key={img.image.name} fluid={img.image.childImageSharp.fluid}/>
+                      <Img key={img.name} fluid={img.childImageSharp.fluid}/>
                     )
                   })}
                 </Slider>

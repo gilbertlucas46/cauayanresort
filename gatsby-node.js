@@ -5,8 +5,8 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(`
-      {
-      villas: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/villas/"}}) {
+      { 
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/villas/"}}) {
           edges {
             node {
               frontmatter {
@@ -18,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
       }   
     `).then(results => {
      
-      results.data.villas.edges.forEach(({node}) => {
+      results.data.allMarkdownRemark.edges.forEach(({node}) => {
         const slug = `${node.frontmatter.title}`
         createPage({
           path: `/villas/${slug.split(' ').join('-').toLowerCase()}`,
