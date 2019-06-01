@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/static/img/gallery`,
+        name: 'gallery',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/navigation`,
         name: 'navigation',
       }
@@ -57,7 +64,13 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-            name: "uploads" // Must match the source name ^
+              name: "uploads" // Must match the source name ^
+            }
+          },
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: "gallery" // Must match the source name ^
             }
           },
           {
