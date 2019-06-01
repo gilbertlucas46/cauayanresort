@@ -31,7 +31,6 @@ const GettingThere_QUERY = graphql`
       }
     }
   }
-
 `;
 
 const GettingThereContainer = styled.div`

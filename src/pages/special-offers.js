@@ -29,6 +29,7 @@ const SpecialOffersContainer = styled.div`
     }
   }
 `;
+
 const SpecialOffersContent = styled.div`
   p {
     text-align:center;

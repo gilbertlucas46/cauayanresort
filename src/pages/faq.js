@@ -8,7 +8,7 @@ import 'rc-collapse/assets/index.css'
 
 import Layout from "../components/layout"
 
-
+ 
 const FAQ_QUERY = graphql`
   query FAQPage{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/main/"}}) {
