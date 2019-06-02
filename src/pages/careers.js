@@ -4,25 +4,18 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
+import Pin from '../images/icons/pin.inline.svg'
+
 const Careers_QUERY = graphql`
   query CareersPage{
     allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/main/"}}) {
       edges {
         node {
           frontmatter {
-            title
-            howtogetthere{
-              desc
-              gettingthere{
-                title
-                desc
-                image{
-                  childImageSharp{
-                    fluid(maxWidth:600){
-                      ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    }
-                  }
-                }
+            careers{
+              tcareers{
+                jname
+                loc
               }
             }
           }
@@ -30,7 +23,6 @@ const Careers_QUERY = graphql`
       }
     }
   }
-
 `;
  
 const CareersContainer = styled.div`
@@ -41,6 +33,46 @@ const CareersContainer = styled.div`
   }
 `;
 const CareersContent = styled.div`
+  .career{
+    border-left: 10px solid #5C3327;
+    padding: 1rem 1.4rem;
+    background-color: #FAFCFC;
+    @media (max-width: 767px) {
+      margin-bottom: 1rem; 
+    }
+    h3 {
+      margin-bottom:  10px;
+      color: #5C3327;
+    }
+    p {
+      margin-bottom: 0;
+      position: relative;
+      padding-left: 20px;
+      svg {
+        position: absolute;
+        left: 0;
+        max-width: 13px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        path {
+          fill: #8C9091;
+        }
+      }
+    }
+    p,h3 {
+      display:block;
+      width: 100%;
+    }
+  }
+  .career > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
   @media(min-width: 768px){
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -72,16 +104,16 @@ const Careers = ({location}) => (
       <article>
         <CareersContainer className="container">
           {allMarkdownRemark.edges.map(edge => {
-            const items = edge.node.frontmatter.howtogetthere;
+            const items = edge.node.frontmatter.careers;
             return (
               <>
-              <div className="intro">
-               <p dangerouslySetInnerHTML = {{ __html: items.desc }}/>
-              </div>
                 <CareersContent>
-                  {items.gettingthere.map(direction => (
+                  {items.tcareers.map(career => (
                     <>
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt explicabo quo facilis praesentium rem sed, nobis natus odio nisi, hic mollitia temporibus. Distinctio aliquam magnam quis quae accusantium minus suscipit!
+                      <div className="career">
+                        <div><h3>{career.jname}</h3>
+                        <p><Pin/>{career.loc}</p></div>
+                      </div>
                     </>
                   ))}
                 </CareersContent>
