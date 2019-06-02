@@ -211,7 +211,7 @@ const Video = () => {
       query={VIDEO_QUERY}
       render={({allMarkdownRemark}) => (
         <>
-        <VideoContainer>
+        <VideoContainer class="videoContainer">
           {allMarkdownRemark.edges.map(edge =>  {
             const vid = edge.node.frontmatter.home.video;
             return (
