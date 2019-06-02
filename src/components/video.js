@@ -235,7 +235,7 @@ const Video = () => {
                     <button onClick={() => setNavOpen(!isNavOpen)} className='close-button'>
                       <Closebtn/>
                     </button>
-                    <iframe className="video" src={isNavOpen ? `${vid.video}` : ``}></iframe>
+                    <iframe title="cauayanVid" className="video" src={isNavOpen ? `${vid.video}` : ``}></iframe>
                   </animated.div>
                 </div>
               </div>
