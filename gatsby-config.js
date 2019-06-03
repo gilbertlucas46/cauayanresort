@@ -92,14 +92,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-crisp-chat',
-      options: {
-        websiteId: 'bdb79c66-b917-462e-aa26-f3e54a42cda9',
-        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
-        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-crisp-chat',
+    //   options: {
+    //     websiteId: 'bdb79c66-b917-462e-aa26-f3e54a42cda9',
+    //     enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+    //     defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
