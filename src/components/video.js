@@ -13,81 +13,7 @@ const VideoContainer = styled.div`
   .vidContent{
     position:relative;
   }
-  .caption > div {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: block;
-    height: 20rem;
-    /* tablet */
-    @media (min-width: 768px) and (max-width:1024px) {
-      height: 24rem;
-      padding: 0px 8rem;
-    }
-     /* mobile */
-     @media (max-width:767px) {
-      height: 26rem;
-      padding: 0px 2rem;
-    }
-
-  }
-  .caption{
-    .playbutton{
-      &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-    }
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    margin:auto;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    h3 {
-      font-family: 'Conv_CASTELAR';
-      font-size: 2.4rem;
-      margin-bottom: 0.8rem;
-      margin-top:2rem;
-      font-weight: 300;
-    }
-    h4 {
-      font-family: 'Conv_majalla';
-      font-size: 2rem;
-      font-weight: 300;
-    }
-    button {
-      background-color: transparent;
-      border:0;
-      display:block;
-      margin:auto;
-      img,div,picture {
-        max-width: 6rem;
-        max-height: 6rem;
-      }
-    }
-    .desc, h3, h4 {
-      text-align:center;
-      color:white;
-      
-    }
-    .desc {
-      font-family: 'Conv_majalla';
-      font-size: 1.6rem;
-      line-height:2rem;
-      max-width:900px;
-      margin:auto;
-      font-weight: 300;
-      @media (max-width:991px) {
-        padding: 0 2rem;
-      }
-    }
-  }
+  
   .modalBody{
     width:100%;
     height:100%;
@@ -206,12 +132,12 @@ const Video = () => {
     isNavOpen ? ModalClass.classList.add('modal-open') : ModalClass.classList.remove('modal-open');
   });
   
+
   return (
     <StaticQuery
       query={VIDEO_QUERY}
       render={({allMarkdownRemark}) => (
-        <>
-        <VideoContainer class="videoContainer">
+        <VideoContainer className="theVId">
           {allMarkdownRemark.edges.map(edge =>  {
             const vid = edge.node.frontmatter.home.video;
             return (
@@ -220,7 +146,7 @@ const Video = () => {
               <Img fluid={vid.tablet.childImageSharp.fluid} className='tabletView'/>
               <Img fluid={vid.mobile.childImageSharp.fluid} className='mobileView'/>
                 <div className="caption">
-                  <div>
+                  <div className="content"> 
                     <button onClick={() => setNavOpen(!isNavOpen)} className='menu-button'>
                       <Img className="playbutton" fixed={vid.button.childImageSharp.fixed} />
                     </button>
@@ -242,7 +168,6 @@ const Video = () => {
             )
           })}
         </VideoContainer>
-        </>
       )}/>
   )
 }

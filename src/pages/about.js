@@ -79,37 +79,7 @@ const AboutContent = styled.div`
       overflow: hidden;
     }
   }
-  .philosophy {
-    .images {
-      .videoContainer{
-        position:relative;
-      }
-      .desktopView, .mobileView, .tabletView {
-        display:none;
-      }
-      .video__VideoContainer-bgjgsQ{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 100px;
-        width: 100px;
-      }
-      .caption > div{
-        height: auto;
-        position: relative;
-        padding: 0;
-      }
-      .caption {
-        position: relative;
-        h3,h4,.desc{
-          display:none;
-        }
-      }
-    }
-  }
+
 `;
 
 

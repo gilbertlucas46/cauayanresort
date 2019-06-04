@@ -712,3 +712,112 @@ p {
 h1,h2,h3,h4,h5,h6{
   font-weight: 300;
 }
+.caption > div {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  height: 20rem;
+  /* tablet */
+  @media (min-width: 768px) and (max-width:1024px) {
+    height: 24rem;
+    padding: 0px 8rem;
+  }
+   /* mobile */
+   @media (max-width:767px) {
+    height: 26rem;
+    padding: 0px 2rem;
+  }
+
+}
+.caption{
+  .playbutton{
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  h3 {
+    font-family: 'Conv_CASTELAR';
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+    margin-top:2rem;
+    font-weight: 300;
+  }
+  h4 {
+    font-family: 'Conv_majalla';
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  button {
+    background-color: transparent;
+    border:0;
+    display:block;
+    margin:auto;
+    img,div,picture {
+      max-width: 6rem;
+      max-height: 6rem;
+    }
+  }
+  .desc, h3, h4 {
+    text-align:center;
+    color:white;
+    
+  }
+  .desc {
+    font-family: 'Conv_majalla';
+    font-size: 1.6rem;
+    line-height:2rem;
+    max-width:900px;
+    margin:auto;
+    font-weight: 300;
+    @media (max-width:991px) {
+      padding: 0 2rem;
+    }
+  }
+}
+.philosophy {
+  .images {
+    .videoContainer{
+      position:relative;
+      .videoContainer{
+
+      }
+    }
+    .desktopView, .mobileView, .tabletView {
+      display:none;
+    }
+    .theVId {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 100px;
+      width: 100px;
+    }
+    .caption > div{
+      height: auto;
+      position: relative;
+      padding: 0;
+    }
+    .caption {
+      position: relative;
+      h3,h4,.desc{
+        display:none;
+      }
+    }
+  }
+}
